@@ -5,7 +5,7 @@ type Props = {
 };
 
 const {
-    title = "My Portfolio",
+    title = "Masjidul | My Portfolio",
     description = "Portfolio website built with Astro",
 } = Astro.props;
 
@@ -23,16 +23,20 @@ import Navbar from "../components/navbar/Navbar.svelte";
     </head>
 
     <body class="min-h-screen bg-[#F6F6F6] flex flex-col text-slate-900">
-        <header class="border-b">
-            <Navbar client:load />
+        <header
+            class="sticky top-0 z-50 border-b border-[#C9C9C9] bg-[#F6F6F6]"
+        >
+            <div class="container mx-auto px-4">
+                <Navbar client:load />
+            </div>
         </header>
 
-        <main class="mx-auto max-w-5xl p-4">
+        <main class="container mx-auto px-4">
             <slot />
         </main>
 
         <footer class="border-t mt-auto">
-            <div class="mx-auto max-w-5xl p-4 text-sm text-slate-600">
+            <div class="container mx-auto px-4 py-4 text-sm text-slate-600">
                 © {new Date().getFullYear()} MyName
             </div>
         </footer>

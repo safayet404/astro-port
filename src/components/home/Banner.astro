@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import me from "../../assets/me.png";
+---
+
+<div class="flex justify-between">
+    <div>
+        <div class="border border-[#7F8395] px-2 rounded-3xl mt-25 w-fit">
+            <ul class="flex gap-9 list-disc pl-4 text-black">
+                <li class="marker:text-green-500 font-medium">Available</li>
+                <li class="marker:text-black font-medium">New Project</li>
+            </ul>
+        </div>
+
+        <div>
+            <h1 class="text-black font-bold text-6xl mt-3">
+                Web Design <br /> To Drive Results & <br /> Faster Business Growth
+            </h1>
+            <p class="text-gray-400 mt-5 font-medium">
+                I Have Worked With Over 50+ Clients And 16+ Brands Trusted By
+                1.3M+ <br /> Customers Worldwide to Help Them Achieve Their Goals
+            </p>
+
+            <button
+                class="font-medium bg-blue-700 px-8 w-md py-2.5 mt-10 rounded-3xl shadow-black shadow-2xl text-white"
+                >Book a Call</button
+            >
+        </div>
+    </div>
+
+    <div>
+        <Image
+            class="mt-25 rounded-2xl"
+            src={me}
+            alt="me"
+            width={400}
+            height={200}
+        />
+    </div>
+</div>
