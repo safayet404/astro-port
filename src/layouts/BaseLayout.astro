@@ -1,0 +1,40 @@
+---
+type Props = {
+    title?: string;
+    description?: string;
+};
+
+const {
+    title = "My Portfolio",
+    description = "Portfolio website built with Astro",
+} = Astro.props;
+
+import "../styles/global.css";
+import Navbar from "../components/navbar/Navbar.svelte";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+    </head>
+
+    <body class="min-h-screen bg-[#F6F6F6] flex flex-col text-slate-900">
+        <header class="border-b">
+            <Navbar client:load />
+        </header>
+
+        <main class="mx-auto max-w-5xl p-4">
+            <slot />
+        </main>
+
+        <footer class="border-t mt-auto">
+            <div class="mx-auto max-w-5xl p-4 text-sm text-slate-600">
+                © {new Date().getFullYear()} MyName
+            </div>
+        </footer>
+    </body>
+</html>
