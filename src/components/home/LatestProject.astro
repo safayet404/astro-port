@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import me from "../../assets/me.png";
+
+const projects = [
+    {
+        id: 1,
+        image: "/p1.png",
+        title: "Health Care",
+    },
+    {
+        id: 2,
+        image: "/p2.png",
+        title: "Doctor",
+    },
+    {
+        id: 3,
+        image: "/p3.png",
+        title: "Flight Booking",
+    },
+    {
+        id: 4,
+        image: "/p4.png",
+        title: "Education",
+    },
+];
+---
+
+<div class="px-4 mb-10">
+    <div class="flex flex-col items-center w-full">
+        <p
+            class="px-2 py-.5 mt-5 border-gray-400 font-medium rounded-3xl text-center border w-fit"
+        >
+            Our Work
+        </p>
+        <h1 class="mt-5 font-bold text-3xl md:text-5xl">Latest Projects</h1>
+    </div>
+    <div class="grid grid-cols-2 gap-5 w-full">
+        {
+            projects.map((item) => {
+                return (
+                    <div>
+                        <Image
+                            class="mt-5 rounded-2xl w-full h-auto object-cover"
+                            src={item.image}
+                            alt="me"
+                            width={800}
+                            height={400}
+                        />
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">
+                            {item.title}
+                        </h2>
+                    </div>
+                );
+            })
+        }
+    </div>
+</div>
