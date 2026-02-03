@@ -75,7 +75,7 @@
 {#if isMenuOpen}
     <div
         transition:fly={{ x: 100, y: 0, duration: 300 }}
-        class="lg:hidden fixed top-16 right-4 bg-base-200 w-56 p-4 rounded-lg shadow-lg z-40"
+        class="lg:hidden fixed top-16 right-4 bg-white w-56 p-4 rounded-lg shadow-lg"
     >
         <button
             on:click={toggleMenu}
@@ -83,60 +83,17 @@
             >x</button
         >
         <ul class="space-y-4 text-left">
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("home")}
-                    class="nav-link"
-                >
-                    Home
-                </button>
-            </li>
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("about")}
-                    class="nav-link"
-                >
-                    About
-                </button>
-            </li>
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("projects")}
-                    class="nav-link"
-                >
-                    Projects
-                </button>
-            </li>
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("education")}
-                    class="nav-link"
-                >
-                    Education-Skill
-                </button>
-            </li>
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("contact")}
-                    class="nav-link"
-                >
-                    Contact
-                </button>
-            </li>
-            <li>
-                <button
-                    type="button"
-                    on:click={() => scrollToSection("contact")}
-                    class="nav-link"
-                >
-                    Resume
-                </button>
-            </li>
+            {#each menu as item}
+                <li>
+                    <button
+                        type="button"
+                        on:click={() => scrollToSection(item.id)}
+                        class="nav-link"
+                    >
+                        {item.name}
+                    </button>
+                </li>
+            {/each}
         </ul>
     </div>
 {/if}
