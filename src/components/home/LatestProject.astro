@@ -5,22 +5,22 @@ import me from "../../assets/me.png";
 const projects = [
     {
         id: 1,
-        image: "/p1.png",
+        image: "/w1.png",
         title: "Health Care",
     },
     {
         id: 2,
-        image: "/p2.png",
+        image: "/w5.png",
         title: "Doctor",
     },
     {
         id: 3,
-        image: "/p3.png",
+        image: "/w3.png",
         title: "Flight Booking",
     },
     {
         id: 4,
-        image: "/p4.png",
+        image: "/w4.png",
         title: "Education",
     },
 ];
@@ -41,11 +41,11 @@ const projects = [
                 return (
                     <div>
                         <Image
-                            class="mt-5 rounded-2xl w-full h-auto object-cover"
+                            class="mt-5 rounded-2xl w-full max-h-200 object-cover"
                             src={item.image}
                             alt="me"
                             width={800}
-                            height={400}
+                            height={200}
                         />
                         <h2 class="font-bold text-xl md:text-2xl mt-3">
                             {item.title}
