@@ -29,7 +29,7 @@
     <!-- Left side navbar -->
     <div>
         <button type="button" on:click={() => scrollToSection("home")}>
-            Masjidul
+            <img src="/footer-logo.png" alt="logo" class="w-14 h-6" />
         </button>
     </div>
 
