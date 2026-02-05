@@ -39,13 +39,13 @@ const projects = [
         {
             projects.map((item) => {
                 return (
-                    <div>
+                    <div class="group cursor-pointer">
                         <Image
-                            class="mt-5 rounded-2xl w-full max-h-200 object-cover"
                             src={item.image}
                             alt="me"
                             width={800}
                             height={200}
+                            class="w-full rounded-2xl max-h-200 mt-5 object-cover transition-transform duration-300 group-hover:scale-[1.02] shadow-md"
                         />
                         <h2 class="font-bold text-xl md:text-2xl mt-3">
                             {item.title}

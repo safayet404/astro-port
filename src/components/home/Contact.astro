@@ -2,154 +2,158 @@
 import { Image } from "astro:assets";
 ---
 
-<section id="contact" class="py-20 lg:py-32 bg-[#F0F0F0]">
-    <div class="container px-4 mx-auto">
-        <div class="flex justify-center gap-12 items-center">
-            <div class="space-y-8">
+<section id="contact" class="py-20 lg:py-32 bg-white">
+    <div class="container px-4 mx-auto max-w-7xl">
+        <div
+            class="flex flex-col lg:flex-row justify-between gap-16 items-start"
+        >
+            <div class="flex-1 space-y-10">
                 <div>
-                    <p
-                        class="px-4 py-1 rounded-full text-gray-900 border border-gray-300 w-fit mb-6 text-xs font-semibold bg-white shadow-sm"
+                    <span
+                        class="px-4 py-1.5 rounded-full text-gray-900 border border-gray-300 text-sm font-medium bg-white"
                     >
                         Contact Us
-                    </p>
+                    </span>
                     <h2
-                        class="text-2xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
+                        class="text-5xl lg:text-7xl font-bold text-gray-900 mt-8 mb-4 leading-[1.1] tracking-tight"
                     >
                         Lat’s Collaborate Togather
                     </h2>
                 </div>
 
-                <div class="p-2 bg-white rounded-md max-w-md">
+                <div class="max-w-md">
                     <Image
                         src="/masjidul.png"
-                        width={800}
-                        height={300}
-                        alt={"contact"}
-                        class="rounded w-full"
+                        width={600}
+                        height={600}
+                        alt="Masjidul"
+                        class="rounded-3xl w-full object-cover aspect-square"
                     />
                 </div>
 
-                <div class="flex flex-col gap-6">
-                    <div>
-                        <p class="text-lg font-semibold mt-1">
-                            Directly Reach Out
+                <div class="space-y-8">
+                    <p class="text-xl font-bold text-gray-900">
+                        Directly Reach Out
+                    </p>
+
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-500 font-medium italic">
+                            Gmail
+                        </p>
+                        <p class="text-2xl font-bold text-gray-900">
+                            hellomasjidul@gmail.com
                         </p>
                     </div>
 
-                    <div>
-                        <h1 class="text-sm text-gray-500 font-medium italic">
-                            Gmail
-                        </h1>
-                        <h2 class="text-2xl font-bold tracking-tight">
-                            masjidulislam678@gmail.com
-                        </h2>
-                    </div>
-
-                    <div>
-                        <h1 class="text-sm text-gray-500 font-medium italic">
-                            WhatsApp / Telegram
-                        </h1>
-                        <h2 class="text-2xl font-bold tracking-tight">
+                    <div class="space-y-1">
+                        <p class="text-sm text-gray-500 font-medium italic">
+                            WhatsApp
+                        </p>
+                        <p class="text-2xl font-bold text-gray-900">
                             +88 018 7518 9361
-                        </h2>
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div
-                class="bg-white max-w-xl p-2 rounded-md shadow-[0_10px_50px_rgba(0,0,0,0.04)] border border-gray-50"
+                class="w-full lg:max-w-2xl bg-[#1A1A1A] rounded-[40px] p-8 lg:p-12"
             >
-                <form class="space-y-5 bg-[#1A1A1A] p-3 rounded-md">
-                    <div class="grid grid-cols-1 gap-5">
+                <form class="space-y-8">
+                    <div class="space-y-3">
+                        <label class="block text-gray-400 text-lg font-medium"
+                            >Full Name</label
+                        >
                         <input
                             type="text"
-                            autocomplete="off"
-                            placeholder="Full name"
-                            class="w-full px-5 py-2.5 bg-transparent border border-[#5F5F5F] rounded-xl focus:bg-[#252525] transition-transform duration-200 text-white"
+                            placeholder="Md. Masjidul islam shohan"
+                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
                         />
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="block text-gray-400 text-lg font-medium"
+                            >Email</label
+                        >
                         <input
                             type="email"
-                            autocomplete="off"
-                            placeholder="Email"
-                            class="w-full px-5 py-2.5 bg-transparent border border-[#5F5F5F] rounded-xl focus:bg-[#252525] transition-transform duration-200 text-white"
+                            placeholder="Md. Masjidul islam shohan"
+                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
                         />
                     </div>
 
-                    <div class="grid grid-cols-1 gap-5">
+                    <div class="space-y-3">
+                        <label class="block text-gray-400 text-lg font-medium"
+                            >WhatsApp</label
+                        >
+                        <select
+                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-gray-500 outline-none focus:border-blue-500 appearance-none"
+                        >
+                            <option>Select your service</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="block text-gray-400 text-lg font-medium"
+                            >Current Website (Optional)</label
+                        >
                         <input
                             type="text"
-                            autocomplete="off"
-                            placeholder="WhatsApp number"
-                            class="w-full px-5 py-2.5 bg-transparent border border-[#5F5F5F] rounded-xl focus:bg-[#252525] transition-transform duration-200 text-white"
+                            placeholder="Website.com"
+                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
                         />
                     </div>
 
-                    <div class="grid grid-cols-1 gap-5">
-                        <input
-                            type="text"
-                            autocomplete="off"
-                            placeholder="masjidul.com"
-                            class="w-full px-5 py-2.5 bg-transparent border border-[#5F5F5F] rounded-xl focus:bg-[#252525] transition-transform duration-200 text-white"
-                        />
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-bold text-white mb-3">
-                            Project Budget?
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <button
-                                type="button"
-                                class="px-4 py-2 rounded-lg border border-[#5F5F5F] text-gray-500 text-sm hover:text-white transition-all"
-                                >Less than $5K</button
-                            >
-                            <button
-                                type="button"
-                                class="px-4 py-2 rounded-lg border border-[#5F5F5F] text-gray-500 text-sm hover:text-white transition-all"
-                                >$5K - $10K</button
-                            >
-                            <button
-                                type="button"
-                                class="px-4 py-2 rounded-lg border border-[#5F5F5F] text-gray-500 text-sm hover:text-white transition-all"
-                                >More than $20K+</button
-                            >
+                    <div class="space-y-4">
+                        <label class="block text-white text-lg font-semibold"
+                            >Project Budget</label
+                        >
+                        <div class="flex flex-wrap gap-3">
+                            {
+                                [
+                                    "Less than $5k",
+                                    "$5k - $10k",
+                                    "More than $20k+",
+                                ].map((budget) => (
+                                    <button
+                                        type="button"
+                                        class="px-6 py-3 rounded-xl border border-gray-700 text-gray-400 text-sm font-medium hover:bg-gray-800 transition-all active:scale-95"
+                                    >
+                                        {budget}
+                                    </button>
+                                ))
+                            }
                         </div>
                     </div>
 
-                    <textarea
-                        rows="4"
-                        autocomplete="off"
-                        placeholder="Tell us about your product and goals."
-                        class="w-full px-5 py-2.5 bg-transparent border border-[#5F5F5F] rounded-xl focus:bg-[#252525] transition-transform duration-200 text-white"
-                    ></textarea>
+                    <div class="space-y-3">
+                        <label class="block text-gray-400 text-lg font-medium"
+                            >Project Details</label
+                        >
+                        <textarea
+                            rows="4"
+                            placeholder="Tell us more about your idea"
+                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors resize-none"
+                        ></textarea>
+                    </div>
 
-                    <!-- <button
-            type="submit"
-            class="w-fit px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center gap-2 group"
-          >
-            Send Message
-            <span
-              class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-              >↗</span
-            >
-          </button> -->
                     <button
-                        class="flex items-center gap-2 px-6 py-2 w-full justify-center rounded-4xl text-white bg-[linear-gradient(180deg,#7091FF_0%,#3363FF_100%)]! transition-transform active:scale-95"
+                        type="submit"
+                        class="w-full py-5 bg-[#3363FF] text-white text-xl font-bold rounded-full flex items-center justify-center gap-3 transition-transform active:scale-95 hover:bg-blue-600 shadow-xl shadow-blue-900/20"
                     >
                         Send Message
                         <svg
-                            width="20"
-                            height="20"
+                            width="24"
+                            height="24"
                             viewBox="0 0 24 24"
                             fill="none"
-                            class="btn-icon"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                         >
-                            <path
-                                d="M7 17L17 7M17 7H7M17 7V17"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path>
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
                         </svg>
                     </button>
                 </form>
@@ -157,101 +161,3 @@ import { Image } from "astro:assets";
         </div>
     </div>
 </section>
-<style>
-    .contact-container {
-        display: grid;
-        gap: 4rem;
-    }
-
-    .section-tag {
-        color: var(--color-primary);
-        font-weight: 600;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-    }
-
-    .contact-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    .contact-desc {
-        color: var(--color-text-secondary);
-        margin-bottom: 3rem;
-    }
-
-    .info-cards {
-        display: grid;
-        gap: 1.5rem;
-    }
-
-    .info-card {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
-        background: #111;
-        border: 1px solid var(--color-border);
-        border-radius: 1rem;
-    }
-
-    .info-icon {
-        width: 50px;
-        height: 50px;
-        background: rgba(59, 130, 246, 0.1);
-        color: var(--color-primary);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-    }
-
-    .contact-form {
-        background: #111;
-        padding: 2.5rem;
-        border-radius: 2rem;
-        border: 1px solid var(--color-border);
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        font-size: 0.9375rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 1rem;
-        background: #0a0a0a;
-        border: 1px solid var(--color-border);
-        border-radius: 0.75rem;
-        color: white;
-        font-family: inherit;
-        transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: var(--color-primary);
-    }
-
-    .btn-block {
-        width: 100%;
-    }
-
-    @media (min-width: 1024px) {
-        .contact-container {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-</style>

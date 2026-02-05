@@ -1,8 +1,17 @@
+---
+import { Image } from "astro:assets";
+---
+
 <div class="mt-5 flex flex-col">
     <div
         class="text-center text-3xl md:text-[10rem] w-full p-10 border-b border-[#EBEBEB] flex items-center font-bold justify-center tracking-tighter"
     >
-        Masjidul
+        <Image
+            alt={"footer"}
+            src={"/footer-logo.png"}
+            width={800}
+            height={200}
+        />
     </div>
 
     <div class="grid grid-cols-2 px-4 md:grid-cols-3 pt-10 items-start">
@@ -34,11 +43,6 @@
         </div>
 
         <div class="flex flex-col items-end md:items-center">
-            <h1
-                class="text-[10px] font-bold text-gray-400 uppercase text-left tracking-widest mb-4"
-            >
-                (Explore)
-            </h1>
             <ul class="text-left space-y-2 text-xl font-bold">
                 <li class="hover:text-blue-600 cursor-pointer">About</li>
                 <li class="hover:text-blue-600 cursor-pointer">Works</li>
@@ -49,11 +53,6 @@
         </div>
 
         <div class="flex flex-col items-start mt-10 md:mt-0 md:items-end">
-            <h1
-                class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4"
-            >
-                (Social)
-            </h1>
             <ul class="text-left space-y-2 text-xl font-bold">
                 <li class="hover:text-blue-600 cursor-pointer">LinkedIn</li>
                 <li class="hover:text-blue-600 cursor-pointer">X/ Twitter</li>
