@@ -29,7 +29,7 @@
     <!-- Left side navbar -->
     <div>
         <button type="button" on:click={() => scrollToSection("home")}>
-            <img src="/footer-logo.png" alt="logo" class="w-14 h-6" />
+            <img src="/logo.svg" alt="logo" class="w-28 h-7" />
         </button>
     </div>
 

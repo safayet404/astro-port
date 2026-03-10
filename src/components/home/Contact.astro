@@ -1,38 +1,53 @@
 ---
-import { Image } from "astro:assets";
+// Contact.astro
+const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
+const services = [
+    "Select your service",
+    "UI/UX Design",
+    "Web Design",
+    "Mobile App Design",
+    "SaaS Design",
+    "E-commerce Design",
+    "Wireframing & Prototyping",
+];
 ---
 
-<section id="contact" class="py-20 lg:py-32 bg-white">
-    <div class="container px-4 mx-auto max-w-7xl">
+<section id="contact" class="py-16 lg:py-24 bg-[#F2F2F2] font-sans">
+    <div class="container px-4 mx-auto max-w-6xl">
         <div
-            class="flex flex-col lg:flex-row justify-between gap-16 items-start"
+            class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 items-start"
         >
-            <div class="flex-1 space-y-10">
+            <!-- Left Column -->
+            <div class="w-full lg:w-auto lg:flex-1 space-y-8">
+                <!-- Badge + Heading -->
                 <div>
                     <span
-                        class="px-4 py-1.5 rounded-full text-gray-900 border border-gray-300 text-sm font-medium bg-white"
+                        class="inline-block px-4 py-1.5 rounded-full text-gray-700 border border-gray-400 text-sm font-medium bg-white"
                     >
                         Contact Us
                     </span>
                     <h2
-                        class="text-5xl lg:text-7xl font-bold text-gray-900 mt-8 mb-4 leading-[1.1] tracking-tight"
+                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1A1A] mt-6 mb-0 leading-[1.1] tracking-tight"
                     >
-                        Lat’s Collaborate Togather
+                        Let's Collaborate<br />Together
                     </h2>
                 </div>
 
-                <div class="max-w-md">
-                    <Image
+                <!-- Image -->
+                <div class="max-w-xs">
+                    <img
                         src="/masjidul.png"
-                        width={600}
-                        height={600}
+                        width="600"
+                        height="600"
                         alt="Masjidul"
-                        class="rounded-3xl w-full object-cover aspect-square"
+                        class="rounded-3xl w-full object-cover object-top aspect-square shadow-sm"
+                        loading="lazy"
                     />
                 </div>
 
-                <div class="space-y-8">
-                    <p class="text-xl font-bold text-gray-900">
+                <!-- Contact Details -->
+                <div class="space-y-6">
+                    <p class="text-base font-bold text-[#1A1A1A]">
                         Directly Reach Out
                     </p>
 
@@ -40,111 +55,169 @@ import { Image } from "astro:assets";
                         <p class="text-sm text-gray-500 font-medium italic">
                             Gmail
                         </p>
-                        <p class="text-2xl font-bold text-gray-900">
+                        <a
+                            href="mailto:hellomasjidul@gmail.com"
+                            class="text-xl font-bold text-[#1A1A1A] hover:text-[#3363FF] transition-colors"
+                        >
                             hellomasjidul@gmail.com
-                        </p>
+                        </a>
                     </div>
 
                     <div class="space-y-1">
                         <p class="text-sm text-gray-500 font-medium italic">
                             WhatsApp
                         </p>
-                        <p class="text-2xl font-bold text-gray-900">
+                        <a
+                            href="https://wa.me/8801875189361"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-xl font-bold text-[#1A1A1A] hover:text-[#3363FF] transition-colors"
+                        >
                             +88 018 7518 9361
-                        </p>
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <!-- Right Column: Form -->
             <div
-                class="w-full lg:max-w-2xl bg-[#1A1A1A] rounded-[40px] p-8 lg:p-12"
+                class="w-full lg:max-w-xl bg-[#1A1A1A] rounded-[32px] p-6 sm:p-10"
             >
-                <form class="space-y-8">
-                    <div class="space-y-3">
-                        <label class="block text-gray-400 text-lg font-medium"
+                <form class="space-y-6" id="contact-form">
+                    <!-- Full Name -->
+                    <div class="space-y-2">
+                        <label class="block text-gray-400 text-sm font-medium"
                             >Full Name</label
                         >
                         <input
                             type="text"
+                            name="name"
                             placeholder="Md. Masjidul islam shohan"
-                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
+                            required
+                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
                         />
                     </div>
 
-                    <div class="space-y-3">
-                        <label class="block text-gray-400 text-lg font-medium"
+                    <!-- Email -->
+                    <div class="space-y-2">
+                        <label class="block text-gray-400 text-sm font-medium"
                             >Email</label
                         >
                         <input
                             type="email"
-                            placeholder="Md. Masjidul islam shohan"
-                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
+                            name="email"
+                            placeholder="hello@example.com"
+                            required
+                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
                         />
                     </div>
 
-                    <div class="space-y-3">
-                        <label class="block text-gray-400 text-lg font-medium"
-                            >WhatsApp</label
+                    <!-- Service (was mislabelled "WhatsApp") -->
+                    <div class="space-y-2">
+                        <label class="block text-gray-400 text-sm font-medium"
+                            >Service</label
                         >
-                        <select
-                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-gray-500 outline-none focus:border-blue-500 appearance-none"
-                        >
-                            <option>Select your service</option>
-                        </select>
+                        <div class="relative">
+                            <select
+                                name="service"
+                                class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-gray-400 text-sm outline-none focus:border-[#3363FF] appearance-none cursor-pointer transition-colors"
+                            >
+                                {
+                                    services.map((s) => (
+                                        <option
+                                            value={
+                                                s === "Select your service"
+                                                    ? ""
+                                                    : s
+                                            }
+                                        >
+                                            {s}
+                                        </option>
+                                    ))
+                                }
+                            </select>
+                            <!-- Dropdown arrow -->
+                            <div
+                                class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-500"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                >
+                                    <polyline points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="space-y-3">
-                        <label class="block text-gray-400 text-lg font-medium"
-                            >Current Website (Optional)</label
+                    <!-- Current Website -->
+                    <div class="space-y-2">
+                        <label class="block text-gray-400 text-sm font-medium"
+                            >Current Website <span class="text-gray-600"
+                                >(Optional)</span
+                            ></label
                         >
                         <input
-                            type="text"
-                            placeholder="Website.com"
-                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors"
+                            type="url"
+                            name="website"
+                            placeholder="https://website.com"
+                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
                         />
                     </div>
 
-                    <div class="space-y-4">
-                        <label class="block text-white text-lg font-semibold"
+                    <!-- Project Budget -->
+                    <div class="space-y-3">
+                        <label class="block text-white text-sm font-semibold"
                             >Project Budget</label
                         >
-                        <div class="flex flex-wrap gap-3">
+                        <div class="flex flex-wrap gap-2" id="budget-group">
                             {
-                                [
-                                    "Less than $5k",
-                                    "$5k - $10k",
-                                    "More than $20k+",
-                                ].map((budget) => (
+                                budgets.map((budget) => (
                                     <button
                                         type="button"
-                                        class="px-6 py-3 rounded-xl border border-gray-700 text-gray-400 text-sm font-medium hover:bg-gray-800 transition-all active:scale-95"
+                                        data-budget={budget}
+                                        class="budget-btn px-5 py-2.5 rounded-xl border border-gray-700 text-gray-400 text-sm font-medium hover:border-[#3363FF] hover:text-white transition-all active:scale-95"
                                     >
                                         {budget}
                                     </button>
                                 ))
                             }
                         </div>
+                        <input
+                            type="hidden"
+                            name="budget"
+                            id="selected-budget"
+                        />
                     </div>
 
-                    <div class="space-y-3">
-                        <label class="block text-gray-400 text-lg font-medium"
+                    <!-- Project Details -->
+                    <div class="space-y-2">
+                        <label class="block text-gray-400 text-sm font-medium"
                             >Project Details</label
                         >
                         <textarea
+                            name="details"
                             rows="4"
-                            placeholder="Tell us more about your idea"
-                            class="w-full px-6 py-4 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-500 outline-none focus:border-blue-500 transition-colors resize-none"
+                            placeholder="Tell us more about your idea..."
+                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors resize-none"
                         ></textarea>
                     </div>
 
+                    <!-- Submit -->
                     <button
                         type="submit"
-                        class="w-full py-5 bg-[#3363FF] text-white text-xl font-bold rounded-full flex items-center justify-center gap-3 transition-transform active:scale-95 hover:bg-blue-600 shadow-xl shadow-blue-900/20"
+                        class="w-full py-4 bg-[#3363FF] text-white text-base font-bold rounded-full flex items-center justify-center gap-2 transition-all active:scale-95 hover:bg-[#2251e0] shadow-lg shadow-blue-900/20"
                     >
                         Send Message
                         <svg
-                            width="24"
-                            height="24"
+                            width="20"
+                            height="20"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -161,3 +234,42 @@ import { Image } from "astro:assets";
         </div>
     </div>
 </section>
+
+<script>
+    // Budget toggle
+    const budgetBtns = document.querySelectorAll(".budget-btn");
+    const selectedBudget = document.getElementById(
+        "selected-budget",
+    ) as HTMLInputElement;
+
+    budgetBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            budgetBtns.forEach((b) => {
+                b.classList.remove(
+                    "border-[#3363FF]",
+                    "text-white",
+                    "bg-[#3363FF]/10",
+                );
+                b.classList.add("border-gray-700", "text-gray-400");
+            });
+            btn.classList.add(
+                "border-[#3363FF]",
+                "text-white",
+                "bg-[#3363FF]/10",
+            );
+            btn.classList.remove("border-gray-700", "text-gray-400");
+            if (selectedBudget)
+                selectedBudget.value =
+                    (btn as HTMLElement).dataset.budget || "";
+        });
+    });
+
+    // Basic form submit handler
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        console.log("Form submitted:", Object.fromEntries(data));
+        // Add your form submission logic here (e.g. fetch to API)
+    });
+</script>

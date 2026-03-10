@@ -14,6 +14,7 @@ import Layout from "../layouts/Layout.astro";
 import ProvideService from "../components/home/ProvideService.astro";
 import Benefits from "../components/home/Benefits.astro";
 import Impact from "../components/home/Impact.astro";
+import Faq from "../components/home/Faq2.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -48,8 +49,9 @@ import Impact from "../components/home/Impact.astro";
 		<ClientSays />
 	</div>
 	<div class="border-b border-[#EBEBEB]">
-		<FAQ client:load />
+		<Faq />
 	</div>
+
 	<div class="border-b border-[#EBEBEB]">
 		<Contact client:load />
 	</div>
