@@ -1,0 +1,243 @@
+---
+// ImpactfulResults.astro
+const teamAvatars = [
+    { initials: "A", color: "bg-purple-400" },
+    { initials: "B", color: "bg-pink-400" },
+    { initials: "C", color: "bg-gray-700" },
+    { initials: "D", color: "bg-orange-400" },
+];
+
+const leftServices = ["Web Design", "Apps Design", "SaaS Design"];
+const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
+---
+
+<section id="results" class="py-20 bg-[#F2F2F2] font-sans">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <!-- Header -->
+        <div class="flex flex-col items-center text-center mb-10 gap-3">
+            <span
+                class="inline-block border border-gray-400 text-gray-600 text-sm px-4 py-1 rounded-full tracking-wide"
+            >
+                Expertise
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-[#1A1A1A]">
+                Impactful Results
+            </h2>
+        </div>
+
+        <!-- Bento Grid -->
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4"
+        >
+            <!-- Card 1: Creative Minds (top-left) -->
+            <div
+                class="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 rounded-3xl p-6 flex flex-col justify-between min-h-[220px]"
+            >
+                <!-- Avatars row -->
+                <div class="flex items-center gap-1 mb-4">
+                    <div class="flex -space-x-2">
+                        {
+                            teamAvatars.map((a) => (
+                                <div
+                                    class={`w-9 h-9 rounded-full ${a.color} border-2 border-white flex items-center justify-center text-white text-xs font-bold`}
+                                >
+                                    {a.initials}
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <span
+                        class="ml-3 bg-white text-[#1A1A1A] text-sm font-semibold px-3 py-1 rounded-full shadow-sm"
+                        >04+</span
+                    >
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-[#1A1A1A] mb-2">
+                        04+ Creative Minds
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Over the past 6+ years, I've worked with creators,
+                        startups, and growing businesses.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Video (center, spans 2 rows) -->
+            <div
+                class="sm:row-span-2 rounded-3xl overflow-hidden relative min-h-[300px] sm:min-h-[560px] bg-black"
+            >
+                <video
+                    class="absolute inset-0 w-full h-full object-cover"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    poster="/globe-poster.jpg"
+                >
+                    <source src="/video.mp4" type="video/mp4" />
+                    <!-- Fallback gradient if no video -->
+                </video>
+                <!-- Fallback background if no video loads -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-blue-900 via-teal-800 to-purple-900 -z-10"
+                >
+                </div>
+
+                <!-- Overlay text at bottom -->
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent"
+                >
+                    <h3
+                        class="text-2xl font-extrabold text-white mb-2 leading-snug"
+                    >
+                        150+ Global and Local Clients
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We ensure excellence for customer satisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3: Rating (top-right) -->
+            <div
+                class="bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100 rounded-3xl p-6 flex flex-col justify-between min-h-[220px]"
+            >
+                <!-- Decorative icons -->
+                <div class="flex justify-end gap-3 mb-2">
+                    <div
+                        class="w-12 h-12 bg-white/70 rounded-2xl flex items-center justify-center shadow-sm text-2xl"
+                    >
+                        ⭐
+                    </div>
+                    <div
+                        class="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center text-white text-lg font-bold self-end"
+                    >
+                        🧑
+                    </div>
+                </div>
+                <!-- Rating avatar row -->
+                <div class="flex justify-end mb-4">
+                    <div
+                        class="w-9 h-9 bg-green-400 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                    >
+                        👦
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-[#1A1A1A] mb-2">
+                        4.9/4 Rating
+                    </h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        We ensure excellence for customer satisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4: Left Services (bottom-left) -->
+            <div
+                class="bg-gradient-to-br from-yellow-50 to-green-100 rounded-3xl p-6 flex flex-col justify-center gap-3 min-h-[220px]"
+            >
+                {
+                    leftServices.map((service, i) => (
+                        <div
+                            class={`flex items-center gap-3 ${i % 2 === 0 ? "justify-start" : "justify-end"}`}
+                        >
+                            {i % 2 === 0 && (
+                                <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                </button>
+                            )}
+                            <span class="bg-white text-[#1A1A1A] font-semibold text-sm px-5 py-2 rounded-full shadow-sm">
+                                {service}
+                            </span>
+                            {i % 2 !== 0 && (
+                                <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                </button>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- Card 5: Right Services (bottom-right) -->
+            <div
+                class="bg-gradient-to-br from-pink-100 to-orange-50 rounded-3xl p-6 flex flex-col justify-center gap-3 min-h-[220px]"
+            >
+                {
+                    rightServices.map((service, i) => (
+                        <div
+                            class={`flex items-center gap-3 ${i % 2 === 0 ? "justify-start" : "justify-end"}`}
+                        >
+                            {i % 2 === 0 && (
+                                <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                </button>
+                            )}
+                            <span class="bg-white text-[#1A1A1A] font-semibold text-sm px-5 py-2 rounded-full shadow-sm">
+                                {service}
+                            </span>
+                            {i % 2 !== 0 && (
+                                <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                </button>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

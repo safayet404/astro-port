@@ -1,0 +1,93 @@
+---
+// Benefits.astro
+const benefits = [
+    "Conversion Guaranteed",
+    "Top-notch Quality",
+    "Lightning Fast Delivery",
+    "Fixed Price, No Hidden Cost",
+    "Unlimited Revisions",
+    "Backed by Super Skilled Team",
+];
+---
+
+<section id="benefits" class="py-10 px-4 bg-[#F2F2F2] font-sans">
+    <div class="container mx-auto max-w-6xl">
+        <div class="bg-[#1A1A1A] rounded-md px-8 py-10 lg:px-12 lg:py-12">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+                <!-- Left Column -->
+                <div class="lg:w-2/5 flex flex-col gap-6">
+                    <span
+                        class="inline-block self-start border border-gray-600 text-gray-400 text-sm px-4 py-1 rounded-full tracking-wide"
+                    >
+                        Why Chose Masjidul Team
+                    </span>
+
+                    <h2
+                        class="text-4xl lg:text-5xl font-extrabold text-white leading-tight"
+                    >
+                        Benefits Of<br />Working With Us
+                    </h2>
+
+                    <a
+                        href="#contact"
+                        class="inline-flex items-center gap-2 self-start bg-[#3363FF] hover:bg-[#2251e0] transition-colors text-white font-semibold text-base px-6 py-3 rounded-full"
+                    >
+                        Book a 15 min into Call
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-4 h-4 -rotate-45"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right Column -->
+                <div class="lg:w-3/5 flex flex-col gap-8">
+                    <!-- Description -->
+                    <p
+                        class="text-gray-400 text-base lg:text-lg leading-relaxed"
+                    >
+                        I Don't Just Design For Screens I Design For Business
+                        Growth. Mention Conversion Rates, User Retention, And
+                        Aligning Design With Business Goals.
+                    </p>
+
+                    <!-- Benefits Grid -->
+                    <ul
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4"
+                    >
+                        {
+                            benefits.map((benefit) => (
+                                <li class="flex items-center gap-3 text-white text-base font-medium">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="w-5 h-5 text-white flex-shrink-0"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                    {benefit}
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
