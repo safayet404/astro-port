@@ -77,11 +77,11 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             </div>
         </div>
 
-        <!-- Center col: video fill (scaleMode=STRETCH, top-left) + gradient overlay | radius:10 -->
+        <!-- Center col: full-bleed video background + gradient overlay | radius:10 -->
         <div class="rounded-[10px] relative overflow-hidden min-h-[400px] lg:min-h-0 self-stretch">
-            <!-- Background video — fills card from top-left (matches Figma scaleMode=STRETCH) -->
+            <!-- Video fills entire card (matches Figma IMAGE FILL scaleMode=STRETCH) -->
             <video
-                class="absolute inset-0 w-full h-full object-cover object-left-top"
+                class="absolute inset-0 w-full h-full object-cover object-bottom"
                 autoplay
                 muted
                 loop
@@ -89,9 +89,9 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             >
                 <source src="/video.mp4" type="video/mp4" />
             </video>
-            <!-- Gradient overlay: transparent #2966F4 → solid #2966F4 (top to bottom) -->
-            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(41,102,244,0) 0%, #2966F4 100%);"></div>
-            <!-- Text pinned to bottom-left -->
+            <!-- Gradient: transparent top → solid #2966F4 bottom (Figma: rgba(41,102,244,0)→rgba(41,102,244,1)) -->
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(41,102,244,0) 0%, rgba(41,102,244,0.6) 55%, #2966F4 75%);"></div>
+            <!-- Text pinned to bottom -->
             <div class="absolute bottom-0 left-0 right-0 p-8 flex flex-col gap-2">
                 <!-- Geist 30px/600 #FFFFFF lh:39 ls:-1 -->
                 <h3 class="text-[30px] font-semibold leading-[39px] tracking-[-1px] text-white">150+ Global and Local Clients</h3>
