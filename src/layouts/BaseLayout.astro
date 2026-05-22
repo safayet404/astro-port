@@ -25,6 +25,10 @@ import Navbar from "../components/navbar/Navbar.svelte";
     </head>
 
     <body class="min-h-screen bg-[#F4F2EE] flex flex-col">
+        <!-- Figma vertical border lines: 2px white, at x=356 (left) and x=1562 (right) on 1920px canvas -->
+        <div class="hidden 2xl:block fixed top-0 bottom-0 left-[356px] w-[2px] bg-white pointer-events-none z-40"></div>
+        <div class="hidden 2xl:block fixed top-0 bottom-0 right-[356px] w-[2px] bg-white pointer-events-none z-40"></div>
+
         <header class="sticky top-0 z-50 bg-white border-b border-[#EBEBEB]">
             <Navbar client:load />
         </header>

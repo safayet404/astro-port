@@ -77,13 +77,27 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             </div>
         </div>
 
-        <!-- Center col: gradient #2966F4 | radius:10 | pad:32 -->
-        <div class="rounded-[10px] p-8 flex flex-col justify-end gap-2 min-h-[400px] lg:min-h-full"
-             style="background: linear-gradient(180deg, rgba(41,102,244,0) 0%, #2966F4 100%);">
-            <!-- Geist 30px/600 #FFFFFF lh:39 ls:-1 -->
-            <h3 class="text-[30px] font-semibold leading-[39px] tracking-[-1px] text-white">150+ Global and Local Clients</h3>
-            <!-- Geist 20px/500 #E6E6E6 lh:30 ls:-0.5 -->
-            <p class="text-[20px] font-medium leading-[30px] tracking-[-0.5px] text-[#E6E6E6]">We ensure excellence for customer satisfaction.</p>
+        <!-- Center col: video fill (scaleMode=STRETCH, top-left) + gradient overlay | radius:10 -->
+        <div class="rounded-[10px] relative overflow-hidden min-h-[400px] lg:min-h-0 self-stretch">
+            <!-- Background video — fills card from top-left (matches Figma scaleMode=STRETCH) -->
+            <video
+                class="absolute inset-0 w-full h-full object-cover object-left-top"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="/video.mp4" type="video/mp4" />
+            </video>
+            <!-- Gradient overlay: transparent #2966F4 → solid #2966F4 (top to bottom) -->
+            <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(41,102,244,0) 0%, #2966F4 100%);"></div>
+            <!-- Text pinned to bottom-left -->
+            <div class="absolute bottom-0 left-0 right-0 p-8 flex flex-col gap-2">
+                <!-- Geist 30px/600 #FFFFFF lh:39 ls:-1 -->
+                <h3 class="text-[30px] font-semibold leading-[39px] tracking-[-1px] text-white">150+ Global and Local Clients</h3>
+                <!-- Geist 20px/500 #E6E6E6 lh:30 ls:-0.5 -->
+                <p class="text-[20px] font-medium leading-[30px] tracking-[-0.5px] text-[#E6E6E6]">We ensure excellence for customer satisfaction.</p>
+            </div>
         </div>
 
         <!-- Right col: VERTICAL gap:16 -->
