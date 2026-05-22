@@ -24,7 +24,7 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 1: gradient #A1ECFF->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col gap-6 border-2 border-white"
-                 style="background: linear-gradient(180deg, #A1ECFF 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #A1ECFF 0%, #FFFFFF 100%);">
                 <!-- Avatars row: 50x50 overlap -4px -->
                 <div class="flex items-center">
                     <div class="flex -space-x-1">
@@ -51,7 +51,7 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 2: gradient #F2FFBE->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col justify-center gap-4 border-2 border-white"
-                 style="background: linear-gradient(180deg, #F2FFBE 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #F2FFBE 0%, #FFFFFF 100%);">
                 {leftServices.map((service, i) => (
                     <div class={`flex items-center gap-[5px] ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
@@ -81,13 +81,13 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
         <div class="rounded-[10px] relative overflow-hidden min-h-[400px] lg:min-h-0 self-stretch">
             <!-- Video fills entire card (matches Figma IMAGE FILL scaleMode=STRETCH) -->
             <video
-                class="absolute inset-0 w-full h-full object-cover object-right"
+                class="absolute inset-0 w-full h-full object-cover object-right "
                 autoplay
                 muted
                 loop
                 playsinline
             >
-                <source src="/video.mp4" type="video/mp4" />
+                <source  src="/video.mp4" type="video/mp4" />
             </video>
             <!-- Gradient: transparent top → solid #2966F4 bottom (Figma: rgba(41,102,244,0)→rgba(41,102,244,1)) -->
             <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(41,102,244,0) 0%, rgba(41,102,244,0.6) 55%, #2966F4 75%);"></div>
@@ -105,7 +105,7 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 3: gradient #B4FFC3->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col justify-between gap-6 border-2 border-white"
-                 style="background: linear-gradient(180deg, #B4FFC3 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #B4FFC3 0%, #FFFFFF 100%);">
                 <div class="flex justify-end gap-3">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#E2F4BA] border border-[#F5F8FF] flex items-center justify-center">
                         <span class="text-2xl">⭐</span>
@@ -121,7 +121,7 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 4: gradient #FFD1C5->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col justify-center gap-4 border-2 border-white"
-                 style="background: linear-gradient(180deg, #FFD1C5 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #FFD1C5 0%, #FFFFFF 100%);">
                 {rightServices.map((service, i) => (
                     <div class={`flex items-center gap-[5px] ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
