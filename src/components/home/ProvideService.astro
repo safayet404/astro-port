@@ -1,175 +1,117 @@
 ---
-// Services.astro
 const services = [
     {
-        number: "01",
-        title: "UI/UX Design",
-        items: [
-            "UX UI Design",
-            "UX UI Consulting",
-            "UX Audit",
-            "UX Research",
-            "Wireframe & UI Prototyping",
-            "Design System",
-        ],
+        number: "(01)",
+        title: "ui/UX Design",
+        description: "Your users will find the app easy to use. Our UI and UX services ensure your product is user-friendly so that it appeals to and catches the hearts of users on any device.",
+        tags: ["UX Research", "UX Usability Testing", "UI UX Consulting", "UI UX Redesign", "UI UX Design", "Design System", "Wireframing and Prototyping", "UI Design"],
+        dark: true,
+        images: ["/w1.png", "/w2.png"],
     },
     {
-        number: "02",
-        title: "Web Design",
-        items: [
-            "UX UI Design",
-            "UX UI Consulting",
-            "UX Audit",
-            "UX Research",
-            "Wireframe & UI Prototyping",
-            "Design System",
-        ],
+        number: "(02)",
+        title: "Website Design",
+        description: "You don't just need a website, you need a sales machine. Our web design is user-friendly, fully responsive, and supports SEO. With each scroll, you can expect more clicks, longer time spent on your website, and more conversions.",
+        tags: ["Website Design", "Landing Page Design", "SaaS Design", "Webflow Design", "Product Design", "E-commerce Design", "Website Redesign", "Web App Design", "B2b Website"],
+        dark: false,
     },
     {
-        number: "03",
+        number: "(03)",
         title: "Mobile App Design",
-        items: [
-            "UX UI Design",
-            "UX UI Consulting",
-            "UX Audit",
-            "UX Research",
-            "Wireframe & UI Prototyping",
-            "Design System",
-        ],
+        description: "Make your app feel effortless from the first tap. We produce a neat and functional app that leads users through each action, improving their confidence and daily usage.",
+        tags: ["Mobile App Design", "iOS App Design", "Android App Design", "App Prototyping", "Mobile UX Audit", "App Redesign"],
+        dark: false,
+    },
+    {
+        number: "(04)",
+        title: "Branding & Identity",
+        description: "Turn first impressions into a lasting impact. We make sure your audience can instantly relate to your brand, wherever they find it. From logo to tone, all the details are carefully unified to help inspire trust and recognition.",
+        tags: ["Mobile App Design", "iOS App Design", "Android App Design", "App Prototyping", "Mobile UX Audit", "App Redesign"],
+        dark: false,
+    },
+    {
+        number: "(05)",
+        title: "Design & Development",
+        description: "Skip the handoff headaches. We ensure that our digital products are visually appealing and are built to meet growing demand. One expert team, one process, zero delays.",
+        tags: [],
+        dark: false,
     },
 ];
 ---
 
-<section id="service" class="py-20 bg-[#F2F2F2] font-sans">
-    <div class="container mx-auto px-6 max-w-6xl">
-        <!-- Header -->
-        <div class="mb-10">
-            <span
-                class="inline-block border border-gray-400 text-gray-600 text-sm px-4 py-1 rounded-full mb-4 tracking-wide"
-            >
-                Services
-            </span>
-            <h2
-                class="text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] leading-tight"
-            >
-                We Provides Services
-            </h2>
+<!-- PROVIDE_SERVICE: 1920x2009 | VERTICAL gap:40 | pad T:50 R:370 B:50 L:370 -->
+<section id="service" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col gap-10">
+
+    <!-- Header: VERTICAL gap:10 -->
+    <div class="flex flex-col gap-[10px]">
+        <div class="inline-flex self-start border border-[#BDC1C7] rounded-full py-[10px] px-4">
+            <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Services</span>
         </div>
+        <!-- Geist 50px/700 #1A1A1A lh:65 ls:-2 -->
+        <h2 class="text-[40px] lg:text-[50px] font-bold leading-[65px] tracking-[-2px] text-[#1A1A1A]">We Provides services</h2>
+    </div>
 
-        <!-- Body: Two columns -->
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
-            <!-- Left: Accordion List -->
-            <div class="w-full lg:w-1/2 space-y-1">
-                {
-                    services.map((service, i) => (
-                        <div
-                            class={`rounded-2xl transition-all duration-300 overflow-hidden ${
-                                i === 0
-                                    ? "bg-white shadow-sm"
-                                    : "bg-transparent border border-transparent hover:border-gray-200"
-                            }`}
-                        >
-                            <button
-                                class="w-full flex items-center justify-between px-6 py-5 text-left group"
-                                aria-expanded={i === 0 ? "true" : "false"}
-                                data-index={i}
-                            >
-                                <div class="flex items-center gap-4">
-                                    <span class="text-sm text-gray-400 font-medium w-8">
-                                        ({service.number})
-                                    </span>
-                                    <span
-                                        class={`text-xl font-bold transition-colors ${
-                                            i === 0
-                                                ? "text-[#1A1A1A]"
-                                                : "text-gray-500"
-                                        }`}
-                                    >
-                                        {service.title}
-                                    </span>
-                                </div>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 text-gray-400 -rotate-45 flex-shrink-0"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M5 12h14M12 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </button>
+    <!-- Service cards: VERTICAL gap:20 -->
+    <div class="flex flex-col gap-5">
+        {services.map((service) => (
+            <div class={`w-full rounded-[10px] overflow-hidden ${service.dark ? 'bg-white p-4' : 'bg-white'}`}>
+                <div class={`flex flex-col lg:flex-row gap-10 rounded-[10px] p-8 ${service.dark ? 'bg-[#1A1A1A] pb-0' : 'bg-white'}`}>
 
-                            {/* Sub-items (open by default for first) */}
-                            {service.items.length > 0 && (
-                                <ul
-                                    class={`px-6 pb-6 space-y-3 ${i === 0 ? "block" : "hidden"}`}
-                                    data-sub={i}
-                                >
-                                    {service.items.map((item) => (
-                                        <li class="text-gray-500 text-base pl-12">
-                                            {item}
-                                        </li>
+                    <!-- Number: Geist 24px/500 lh:31.2 ls:-0.24 -->
+                    <span class={`text-[24px] font-medium leading-[31.2px] tracking-[-0.24px] shrink-0 ${service.dark ? 'text-white' : 'text-[#4E5663]'}`}>
+                        {service.number}
+                    </span>
+
+                    <!-- Content: VERTICAL gap:24 -->
+                    <div class="flex-1 flex flex-col lg:flex-row justify-between gap-10">
+                        <div class="flex flex-col gap-4 flex-1">
+                            <!-- Title: Geist 30px/600 lh:39 ls:-1 -->
+                            <h3 class={`text-[30px] font-semibold leading-[39px] tracking-[-1px] ${service.dark ? 'text-white' : 'text-[#1A1A1A]'}`}>
+                                {service.title}
+                            </h3>
+                            <!-- Description: Geist 20px/500 lh:30 ls:-0.5 -->
+                            <p class={`text-[20px] font-medium leading-[30px] tracking-[-0.5px] ${service.dark ? 'text-[#D1D1D1]' : 'text-[#4E5663]'}`}>
+                                {service.description}
+                            </p>
+                            <!-- Tags: flex-wrap, pad T:10 R:16 B:10 L:16, radius:100 -->
+                            {service.tags.length > 0 && (
+                                <div class="flex flex-wrap gap-[10px] mt-2">
+                                    {service.tags.map((tag, ti) => (
+                                        <span class={`text-[18px] font-medium leading-[30px] tracking-[-0.5px] py-[10px] px-4 rounded-full border ${
+                                            service.dark && ti === 0
+                                                ? 'border-white text-white'
+                                                : service.dark
+                                                    ? 'border-[#E6E6E6] text-white'
+                                                    : 'border-[#E6E6E6] text-[#4E5663]'
+                                        }`}>
+                                            {tag}
+                                        </span>
                                     ))}
-                                </ul>
+                                </div>
+                            )}
+                            <!-- Images for service 01 -->
+                            {service.images && (
+                                <div class="flex gap-5 mt-2 pb-0">
+                                    {service.images.map((img) => (
+                                        <div class="flex-1 h-[341px] bg-[#2A2A2A] rounded-[10px] overflow-hidden">
+                                            <img src={img} alt="" class="w-full h-full object-cover opacity-80" onerror="this.parentElement.style.background='#2A2A2A'" />
+                                        </div>
+                                    ))}
+                                </div>
                             )}
                         </div>
-                    ))
-                }
-            </div>
 
-            <!-- Right: Image -->
-            <div class="w-full lg:w-1/2 flex justify-center items-center">
-                <div
-                    class="w-full max-w-sm rounded-3xl overflow-hidden bg-[#1A1A1A] aspect-[4/5] flex items-center justify-center shadow-xl"
-                >
-                    <img
-                        src="/mobile.png"
-                        alt="Service mockup"
-                        class="w-full h-full object-cover rounded-3xl"
-                        onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-white/20 text-center p-10\'><svg xmlns=\'http://www.w3.org/2000/svg\' class=\'w-24 h-24 mx-auto mb-4 opacity-30\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1\' d=\'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z\'/></svg><p class=\'text-white/40 text-sm\'>mobile.png</p></div>'"
-                    />
+                        <!-- Arrow button: 52x52 radius:16 bg:#2966F4 -->
+                        <div class="shrink-0 self-start">
+                            <div class="w-[52px] h-[52px] rounded-2xl bg-[#2966F4] flex items-center justify-center">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M8 24L24 8M24 8H8M24 8V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        ))}
     </div>
 </section>
-
-<script>
-    const buttons = document.querySelectorAll("[data-index]");
-
-    buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const idx = btn.getAttribute("data-index");
-            const sub = document.querySelector(`[data-sub="${idx}"]`);
-            const parentCard = btn.closest("div.rounded-2xl");
-            const allCards = document.querySelectorAll("[data-index]");
-
-            // Reset all
-            allCards.forEach((b) => {
-                const i = b.getAttribute("data-index");
-                const s = document.querySelector(`[data-sub="${i}"]`);
-                const card = b.closest("div.rounded-2xl");
-                if (card) {
-                    card.classList.remove("bg-white", "shadow-sm");
-                    card.classList.add("bg-transparent");
-                }
-                if (s) s.classList.add("hidden");
-                const label = b.querySelector(
-                    "span:nth-child(2), div span:last-child",
-                );
-            });
-
-            // Activate clicked
-            if (parentCard) {
-                parentCard.classList.add("bg-white", "shadow-sm");
-                parentCard.classList.remove("bg-transparent");
-            }
-            if (sub) sub.classList.remove("hidden");
-        });
-    });
-</script>

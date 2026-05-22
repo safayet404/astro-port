@@ -1,275 +1,192 @@
 ---
-// Contact.astro
 const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
-const services = [
-    "Select your service",
-    "UI/UX Design",
-    "Web Design",
-    "Mobile App Design",
-    "SaaS Design",
-    "E-commerce Design",
-    "Wireframing & Prototyping",
-];
 ---
 
-<section id="contact" class="py-16 lg:py-24 bg-[#F2F2F2] font-sans">
-    <div class="container px-4 mx-auto max-w-6xl">
-        <div
-            class="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 items-start"
-        >
-            <!-- Left Column -->
-            <div class="w-full lg:w-auto lg:flex-1 space-y-8">
-                <!-- Badge + Heading -->
-                <div>
-                    <span
-                        class="inline-block px-4 py-1.5 rounded-full text-gray-700 border border-gray-400 text-sm font-medium bg-white"
-                    >
-                        Contact Us
-                    </span>
-                    <h2
-                        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1A1A] mt-6 mb-0 leading-[1.1] tracking-tight"
-                    >
-                        Let's Collaborate<br />Together
-                    </h2>
-                </div>
+<!-- CONTACT: 1920x945 | pad T:50 R:370 B:50 L:370 | HORIZONTAL gap:88 -->
+<section id="contact" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-start">
 
-                <!-- Image -->
-                <div class="max-w-xs">
-                    <img
-                        src="/masjidul.png"
-                        width="600"
-                        height="600"
-                        alt="Masjidul"
-                        class="rounded-3xl w-full object-cover object-top aspect-square shadow-sm"
-                        loading="lazy"
+    <!-- Left col: 319x705 | VERTICAL gap:40 -->
+    <div class="flex flex-col gap-10 w-full lg:max-w-[319px] shrink-0">
+
+        <!-- Badge + Heading -->
+        <div class="flex flex-col gap-[10px]">
+            <!-- Badge: stroke:#BDC1C7 | Geist 16px/500 #4E5663 | radius:100 -->
+            <div class="inline-flex self-start border border-[#BDC1C7] rounded-full py-[10px] px-4">
+                <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Contact Us</span>
+            </div>
+            <!-- Heading: Geist 50px/700 #1A1A1A lh:54 ls:-2 -->
+            <h2 class="text-[36px] lg:text-[50px] font-bold leading-[1.08] lg:leading-[54px] tracking-[-2px] text-[#1A1A1A]">
+                Let's Collaborate Together
+            </h2>
+        </div>
+
+        <!-- Image: 283x283 radius:10 -->
+        <div class="w-full lg:w-[283px] lg:h-[283px] rounded-[10px] overflow-hidden shrink-0">
+            <img src="/masjidul.png" alt="Masjidul" class="w-full h-full object-cover object-top" />
+        </div>
+
+        <!-- Contact info: VERTICAL gap:24 -->
+        <div class="flex flex-col gap-6">
+            <!-- "Directly Reach Out": Geist 20px/500 #1A1A1A ls:-0.5 -->
+            <p class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-[#1A1A1A]">Directly Reach Out</p>
+
+            <!-- Gmail: label Geist 20px/400 #4E5663 ls:-1 | value Geist 24px/600 #1A1A1A lh:31.2 ls:-1 -->
+            <div class="flex flex-col gap-1">
+                <span class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]">Gmail</span>
+                <a
+                    href="mailto:hellomasjidul@gmail.com"
+                    class="text-[20px] lg:text-[24px] font-semibold leading-[31.2px] tracking-[-1px] text-[#1A1A1A] hover:text-[#2966F4] transition-colors break-all"
+                >
+                    hellomasjidul@gmail.com
+                </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex flex-col gap-1">
+                <span class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]">WhatsApp</span>
+                <a
+                    href="https://wa.me/8801875189361"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[24px] font-semibold leading-[31.2px] tracking-[-1px] text-[#1A1A1A] hover:text-[#2966F4] transition-colors"
+                >
+                    +88 018 7518 9361
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right col: 584x841 | bg:#FFFFFF pad:16 radius:10 -->
+    <div class="w-full flex-1 bg-white p-4 rounded-[10px]">
+        <!-- Inner dark card: bg:#1A1A1A radius:10 pad:40 -->
+        <div class="bg-[#1A1A1A] rounded-[10px] p-8 lg:p-[40px]">
+            <form class="flex flex-col gap-6" id="contact-form">
+
+                <!-- Full Name: label Geist 20px/500 #FFFFFF ls:-0.5 -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Full Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Md. Masjidul Islam"
+                        required
+                        class="w-full px-5 py-4 bg-[#1A1A1A] border border-[#4E5663] rounded-[16px] text-[18px] font-medium leading-[23.4px] text-[#4E5663] placeholder-[#4E5663]/60 outline-none focus:border-white transition-colors"
                     />
                 </div>
 
-                <!-- Contact Details -->
-                <div class="space-y-6">
-                    <p class="text-base font-bold text-[#1A1A1A]">
-                        Directly Reach Out
-                    </p>
+                <!-- Email -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="hello@example.com"
+                        required
+                        class="w-full px-5 py-4 bg-[#1A1A1A] border border-[#4E5663] rounded-[16px] text-[18px] font-medium leading-[23.4px] text-[#4E5663] placeholder-[#4E5663]/60 outline-none focus:border-white transition-colors"
+                    />
+                </div>
 
-                    <div class="space-y-1">
-                        <p class="text-sm text-gray-500 font-medium italic">
-                            Gmail
-                        </p>
-                        <a
-                            href="mailto:hellomasjidul@gmail.com"
-                            class="text-xl font-bold text-[#1A1A1A] hover:text-[#3363FF] transition-colors"
+                <!-- Service -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Service</label>
+                    <div class="relative">
+                        <select
+                            name="service"
+                            class="w-full px-5 py-4 bg-[#1A1A1A] border border-[#4E5663] rounded-[16px] text-[18px] font-medium leading-[23.4px] text-[#4E5663] outline-none appearance-none cursor-pointer focus:border-white transition-colors"
                         >
-                            hellomasjidul@gmail.com
-                        </a>
-                    </div>
-
-                    <div class="space-y-1">
-                        <p class="text-sm text-gray-500 font-medium italic">
-                            WhatsApp
-                        </p>
-                        <a
-                            href="https://wa.me/8801875189361"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-xl font-bold text-[#1A1A1A] hover:text-[#3363FF] transition-colors"
-                        >
-                            +88 018 7518 9361
-                        </a>
+                            <option value="">Select your service</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Mobile App Design">Mobile App Design</option>
+                            <option value="SaaS Design">SaaS Design</option>
+                            <option value="E-commerce Design">E-commerce Design</option>
+                            <option value="Wireframing & Prototyping">Wireframing &amp; Prototyping</option>
+                        </select>
+                        <div class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#4E5663]">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Column: Form -->
-            <div
-                class="w-full lg:max-w-xl bg-[#1A1A1A] rounded-[32px] p-6 sm:p-10"
-            >
-                <form class="space-y-6" id="contact-form">
-                    <!-- Full Name -->
-                    <div class="space-y-2">
-                        <label class="block text-gray-400 text-sm font-medium"
-                            >Full Name</label
-                        >
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Md. Masjidul islam shohan"
-                            required
-                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
-                        />
-                    </div>
+                <!-- Current Website -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">
+                        Current Website <span class="text-[#4E5663]">(Optional)</span>
+                    </label>
+                    <input
+                        type="url"
+                        name="website"
+                        placeholder="https://website.com"
+                        class="w-full px-5 py-4 bg-[#1A1A1A] border border-[#4E5663] rounded-[16px] text-[18px] font-medium leading-[23.4px] text-[#4E5663] placeholder-[#4E5663]/60 outline-none focus:border-white transition-colors"
+                    />
+                </div>
 
-                    <!-- Email -->
-                    <div class="space-y-2">
-                        <label class="block text-gray-400 text-sm font-medium"
-                            >Email</label
-                        >
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="hello@example.com"
-                            required
-                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
-                        />
-                    </div>
-
-                    <!-- Service (was mislabelled "WhatsApp") -->
-                    <div class="space-y-2">
-                        <label class="block text-gray-400 text-sm font-medium"
-                            >Service</label
-                        >
-                        <div class="relative">
-                            <select
-                                name="service"
-                                class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-gray-400 text-sm outline-none focus:border-[#3363FF] appearance-none cursor-pointer transition-colors"
+                <!-- Project Budget: pills -->
+                <div class="flex flex-col gap-3">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Project Budget</label>
+                    <div class="flex flex-wrap gap-2" id="budget-group">
+                        {budgets.map((budget) => (
+                            <button
+                                type="button"
+                                data-budget={budget}
+                                class="budget-btn px-5 py-[10px] rounded-full border border-[#4E5663] text-[18px] font-medium leading-[23.4px] text-[#4E5663] hover:border-white hover:text-white transition-all"
                             >
-                                {
-                                    services.map((s) => (
-                                        <option
-                                            value={
-                                                s === "Select your service"
-                                                    ? ""
-                                                    : s
-                                            }
-                                        >
-                                            {s}
-                                        </option>
-                                    ))
-                                }
-                            </select>
-                            <!-- Dropdown arrow -->
-                            <div
-                                class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-500"
-                            >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2.5"
-                                    stroke-linecap="round"
-                                >
-                                    <polyline points="6 9 12 15 18 9"
-                                    ></polyline>
-                                </svg>
-                            </div>
-                        </div>
+                                {budget}
+                            </button>
+                        ))}
                     </div>
+                    <input type="hidden" name="budget" id="selected-budget" />
+                </div>
 
-                    <!-- Current Website -->
-                    <div class="space-y-2">
-                        <label class="block text-gray-400 text-sm font-medium"
-                            >Current Website <span class="text-gray-600"
-                                >(Optional)</span
-                            ></label
-                        >
-                        <input
-                            type="url"
-                            name="website"
-                            placeholder="https://website.com"
-                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors"
-                        />
-                    </div>
+                <!-- Project Details -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Project Details</label>
+                    <textarea
+                        name="details"
+                        rows="4"
+                        placeholder="Tell us more about your idea..."
+                        class="w-full px-5 py-4 bg-[#1A1A1A] border border-[#4E5663] rounded-[16px] text-[18px] font-medium leading-[23.4px] text-[#4E5663] placeholder-[#4E5663]/60 outline-none focus:border-white transition-colors resize-none"
+                    ></textarea>
+                </div>
 
-                    <!-- Project Budget -->
-                    <div class="space-y-3">
-                        <label class="block text-white text-sm font-semibold"
-                            >Project Budget</label
-                        >
-                        <div class="flex flex-wrap gap-2" id="budget-group">
-                            {
-                                budgets.map((budget) => (
-                                    <button
-                                        type="button"
-                                        data-budget={budget}
-                                        class="budget-btn px-5 py-2.5 rounded-xl border border-gray-700 text-gray-400 text-sm font-medium hover:border-[#3363FF] hover:text-white transition-all active:scale-95"
-                                    >
-                                        {budget}
-                                    </button>
-                                ))
-                            }
-                        </div>
-                        <input
-                            type="hidden"
-                            name="budget"
-                            id="selected-budget"
-                        />
-                    </div>
-
-                    <!-- Project Details -->
-                    <div class="space-y-2">
-                        <label class="block text-gray-400 text-sm font-medium"
-                            >Project Details</label
-                        >
-                        <textarea
-                            name="details"
-                            rows="4"
-                            placeholder="Tell us more about your idea..."
-                            class="w-full px-5 py-3.5 bg-[#252525] border border-gray-700 rounded-2xl text-white placeholder-gray-600 text-sm outline-none focus:border-[#3363FF] transition-colors resize-none"
-                        ></textarea>
-                    </div>
-
-                    <!-- Submit -->
-                    <button
-                        type="submit"
-                        class="w-full py-4 bg-[#3363FF] text-white text-base font-bold rounded-full flex items-center justify-center gap-2 transition-all active:scale-95 hover:bg-[#2251e0] shadow-lg shadow-blue-900/20"
-                    >
-                        Send Message
-                        <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </button>
-                </form>
-            </div>
+                <!-- Submit: bg:#2966F4 | radius:100 | h:64 | Geist 22px/500 -->
+                <button
+                    type="submit"
+                    class="w-full flex items-center justify-center gap-2 bg-[#2966F4] text-white rounded-full py-[10px] px-5 text-[22px] font-medium leading-[28.6px] hover:bg-[#1d50d4] transition-colors"
+                    style="height:64px;"
+                >
+                    Send Message
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <path d="M6 20L20 6M20 6H6M20 6V20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
         </div>
     </div>
 </section>
 
 <script>
-    // Budget toggle
     const budgetBtns = document.querySelectorAll(".budget-btn");
-    const selectedBudget = document.getElementById(
-        "selected-budget",
-    ) as HTMLInputElement;
+    const selectedBudget = document.getElementById("selected-budget") as HTMLInputElement;
 
     budgetBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
             budgetBtns.forEach((b) => {
-                b.classList.remove(
-                    "border-[#3363FF]",
-                    "text-white",
-                    "bg-[#3363FF]/10",
-                );
-                b.classList.add("border-gray-700", "text-gray-400");
+                b.classList.remove("border-white", "text-white");
+                b.classList.add("border-[#4E5663]", "text-[#4E5663]");
             });
-            btn.classList.add(
-                "border-[#3363FF]",
-                "text-white",
-                "bg-[#3363FF]/10",
-            );
-            btn.classList.remove("border-gray-700", "text-gray-400");
-            if (selectedBudget)
-                selectedBudget.value =
-                    (btn as HTMLElement).dataset.budget || "";
+            btn.classList.remove("border-[#4E5663]", "text-[#4E5663]");
+            btn.classList.add("border-white", "text-white");
+            if (selectedBudget) selectedBudget.value = (btn as HTMLElement).dataset.budget || "";
         });
     });
 
-    // Basic form submit handler
     const form = document.getElementById("contact-form") as HTMLFormElement;
     form?.addEventListener("submit", (e) => {
         e.preventDefault();
         const data = new FormData(form);
         console.log("Form submitted:", Object.fromEntries(data));
-        // Add your form submission logic here (e.g. fetch to API)
     });
 </script>

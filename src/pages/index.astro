@@ -2,22 +2,15 @@
 import Footer from "../components/footer/Footer.astro";
 import About from "../components/home/About.astro";
 import Banner from "../components/home/Banner.astro";
-import ClientSays from "../components/home/ClientSays.astro";
 import Contact from "../components/home/Contact.astro";
-import FAQ from "../components/home/FAQ";
+import Faq from "../components/home/Faq2.astro";
 import LatestProject from "../components/home/LatestProject.astro";
 import Team from "../components/home/Team.astro";
 import TrustedBy from "../components/home/TrustedBy.astro";
-import Welcome from "../components/Welcome.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Layout from "../layouts/Layout.astro";
 import ProvideService from "../components/home/ProvideService.astro";
 import Benefits from "../components/home/Benefits.astro";
 import Impact from "../components/home/Impact.astro";
-import Faq from "../components/home/Faq2.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <BaseLayout>
@@ -46,16 +39,10 @@ import Faq from "../components/home/Faq2.astro";
 		<Team />
 	</div>
 	<div class="border-b border-[#EBEBEB]">
-		<ClientSays />
-	</div>
-	<div class="border-b border-[#EBEBEB]">
 		<Faq />
 	</div>
-
 	<div class="border-b border-[#EBEBEB]">
-		<Contact client:load />
+		<Contact />
 	</div>
-	<div class="border-b border-[#EBEBEB]">
-		<Footer />
-	</div>
+	<Footer />
 </BaseLayout>

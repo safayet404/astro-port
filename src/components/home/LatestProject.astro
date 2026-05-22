@@ -1,58 +1,69 @@
 ---
-import { Image } from "astro:assets";
-import me from "../../assets/me.png";
-
 const projects = [
-    {
-        id: 1,
-        image: "/w1.png",
-        title: "Health Care",
-    },
-    {
-        id: 2,
-        image: "/w5.png",
-        title: "Doctor",
-    },
-    {
-        id: 3,
-        image: "/w3.png",
-        title: "Flight Booking",
-    },
-    {
-        id: 4,
-        image: "/w4.png",
-        title: "Education",
-    },
+    { id: 1, image: "/w1.png", title: "Health Care" },
+    { id: 2, image: "/w5.png", title: "Flight Booking" },
+    { id: 3, image: "/w3.png", title: "Health Care" },
+    { id: 4, image: "/w4.png", title: "Flight Booking" },
 ];
 ---
 
-<div id="work" class="px-4 mb-10">
-    <div class="flex flex-col items-center w-full">
-        <p
-            class="px-2 py-.5 mt-5 border-gray-400 font-medium rounded-3xl text-center border w-fit"
-        >
-            Our Work
-        </p>
-        <h1 class="mt-5 font-bold text-3xl md:text-5xl">Latest Projects</h1>
+<!-- LATEST_PROJECTS: 1920x1523 | VERTICAL gap:40 | pad T:50 R:370 B:50 L:370 -->
+<section id="work" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col gap-10">
+
+    <!-- Header: VERTICAL gap:10 -->
+    <div class="flex flex-col gap-[10px]">
+        <!-- Badge: pad T:10 R:16 B:10 L:16 | radius:100 | stroke:#BDC1C7 1px -->
+        <div class="inline-flex self-start border border-[#BDC1C7] rounded-full py-[10px] px-4">
+            <!-- Geist 16px/500 #4E5663 lh:20.8 -->
+            <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Our Work</span>
+        </div>
+        <!-- Heading: Geist 50px/700 #1A1A1A lh:65 ls:-2 -->
+        <h2 class="text-[40px] lg:text-[50px] font-bold leading-[65px] tracking-[-2px] text-[#1A1A1A]">Latest Projects</h2>
     </div>
-    <div class="grid grid-cols-2 gap-5 w-full">
-        {
-            projects.map((item) => {
-                return (
-                    <div class="group cursor-pointer">
-                        <Image
+
+    <!-- 2x2 Grid: VERTICAL gap:28 | each row HORIZONTAL gap:28 -->
+    <div class="flex flex-col gap-[28px]">
+        <!-- Row 1 -->
+        <div class="flex flex-col lg:flex-row gap-[28px]">
+            {projects.slice(0, 2).map((item) => (
+                <div class="flex-1 flex flex-col gap-4 bg-white p-4 rounded-[10px]">
+                    <!-- Image: 544x544 radius:10 -->
+                    <div class="w-full aspect-square rounded-[10px] overflow-hidden bg-gray-100">
+                        <img
                             src={item.image}
-                            alt="me"
-                            width={800}
-                            height={100}
-                            class="w-full rounded-2xl max-h-150 mt-5 object-cover transition-transform duration-300 group-hover:scale-[1.02] shadow-md"
+                            alt={item.title}
+                            class="w-full h-full object-cover"
                         />
-                        <h2 class="font-bold text-xl md:text-2xl mt-3">
-                            {item.title}
-                        </h2>
                     </div>
-                );
-            })
-        }
+                    <!-- Title: Geist 24px/600 #1A1A1A lh:31.2 | SPACE_BETWEEN with arrow -->
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-[24px] font-semibold leading-[31.2px] text-[#1A1A1A]">{item.title}</h3>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 24L24 8M24 8H8M24 8V24" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            ))}
+        </div>
+        <!-- Row 2 -->
+        <div class="flex flex-col lg:flex-row gap-[28px]">
+            {projects.slice(2, 4).map((item) => (
+                <div class="flex-1 flex flex-col gap-4 bg-white p-4 rounded-[10px]">
+                    <div class="w-full aspect-square rounded-[10px] overflow-hidden bg-gray-100">
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-[24px] font-semibold leading-[31.2px] text-[#1A1A1A]">{item.title}</h3>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 24L24 8M24 8H8M24 8V24" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            ))}
+        </div>
     </div>
-</div>
+</section>

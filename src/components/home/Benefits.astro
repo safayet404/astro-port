@@ -1,91 +1,89 @@
 ---
-// Benefits.astro
 const benefits = [
-    "Conversion Guaranteed",
-    "Top-notch Quality",
-    "Lightning Fast Delivery",
-    "Fixed Price, No Hidden Cost",
-    "Unlimited Revisions",
-    "Backed by Super Skilled Team",
+    { label: "Conversion Guaranteed" },
+    { label: "Top-notch Quality" },
+    { label: "Lightning Fast Delivery" },
+    { label: "Fixed Price, No Hidden Cost" },
+    { label: "Unlimited Revisions" },
+    { label: "Backed by Super Skilled Team" },
 ];
 ---
 
-<section id="benefits" class="py-10 px-4 bg-[#F2F2F2] font-sans">
-    <div class="container mx-auto max-w-6xl">
-        <div class="bg-[#1A1A1A] rounded-md px-8 py-10 lg:px-12 lg:py-12">
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-                <!-- Left Column -->
-                <div class="lg:w-2/5 flex flex-col gap-6">
-                    <span
-                        class="inline-block self-start border border-gray-600 text-gray-400 text-sm px-4 py-1 rounded-full tracking-wide"
-                    >
-                        Why Chose Masjidul Team
-                    </span>
+<!-- BENEFITS: 1920x490 | VERTICAL gap:10 | pad T:50 R:370 B:50 L:370 -->
+<section id="benefits" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col gap-[10px]">
 
-                    <h2
-                        class="text-4xl lg:text-5xl font-extrabold text-white leading-tight"
-                    >
-                        Benefits Of<br />Working With Us
-                    </h2>
+    <!-- Outer white card: 1180x390 | bg:#FFFFFF | pad 16 -->
+    <div class="w-full bg-white p-4 rounded-[10px]">
 
-                    <a
-                        href="#contact"
-                        class="inline-flex items-center gap-2 self-start bg-[#3363FF] hover:bg-[#2251e0] transition-colors text-white font-semibold text-base px-6 py-3 rounded-full"
-                    >
-                        Book a 15 min into Call
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-4 h-4 -rotate-45"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
+        <!-- Inner dark card: HORIZONTAL gap:20 | pad T:32 R:20 B:32 L:20 | radius:10 | bg:#1A1A1A | SPACE_BETWEEN align:CENTER -->
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 bg-[#1A1A1A] rounded-[10px] py-8 px-5">
+
+            <!-- Left: 400x254 | VERTICAL gap:36 -->
+            <div class="flex flex-col gap-9 max-w-[400px]">
+
+                <!-- Badge: stroke:#4E5663 1px | Geist 16px/500 #FFFFFF | pad T:10 R:16 B:10 L:16 | radius:100 -->
+                <div class="inline-flex self-start border border-[#4E5663] rounded-full py-[10px] px-4">
+                    <span class="text-[16px] font-medium leading-[20.8px] text-white">Why Chose Masjidul Team</span>
                 </div>
 
-                <!-- Right Column -->
-                <div class="lg:w-3/5 flex flex-col gap-8">
-                    <!-- Description -->
-                    <p
-                        class="text-gray-400 text-base lg:text-lg leading-relaxed"
-                    >
-                        I Don't Just Design For Screens I Design For Business
-                        Growth. Mention Conversion Rates, User Retention, And
-                        Aligning Design With Business Goals.
-                    </p>
+                <!-- Heading: Geist 50px/700 #FFFFFF lh:54 ls:-2 -->
+                <h2 class="text-[36px] lg:text-[50px] font-bold leading-[1.08] lg:leading-[54px] tracking-[-2px] text-white">
+                    Benefits of working with us
+                </h2>
 
-                    <!-- Benefits Grid -->
-                    <ul
-                        class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4"
-                    >
-                        {
-                            benefits.map((benefit) => (
-                                <li class="flex items-center gap-3 text-white text-base font-medium">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="w-5 h-5 text-white flex-shrink-0"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M5 13l4 4L19 7"
-                                        />
+                <!-- Button: 342x64 | bg:#2966F4 | stroke:#1A1A1A 1px | radius:100 | pad T:10 R:20 B:10 L:20 -->
+                <a
+                    href="#contact"
+                    class="inline-flex items-center gap-[6px] self-start bg-[#2966F4] border border-[#1A1A1A] text-white rounded-full py-[10px] px-5 hover:bg-[#1d50d4] transition-colors"
+                    style="height:64px;"
+                >
+                    <!-- Geist 22px/500 #FFFFFF lh:28.6 -->
+                    <span class="text-[22px] font-medium leading-[28.6px]">Book a 15 min into Call</span>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <path d="M6 20L20 6M20 6H6M20 6V20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right: 658x257 | VERTICAL gap:40 -->
+            <div class="flex flex-col gap-10 max-w-[658px]">
+
+                <!-- Description: Geist 22px/500 #D1D1D1 lh:30 ls:-0.5 -->
+                <p class="text-[22px] font-medium leading-[30px] tracking-[-0.5px] text-[#D1D1D1]">
+                    I don't just design for screens I design for business growth. Mention conversion rates,
+                    user retention, and aligning design with business goals.
+                </p>
+
+                <!-- Benefits grid: HORIZONTAL gap:32 | 2 columns -->
+                <div class="flex flex-col sm:flex-row gap-8">
+                    <!-- Left column -->
+                    <div class="flex flex-col gap-5">
+                        {benefits.slice(0, 3).map((b) => (
+                            <div class="flex items-center gap-2">
+                                <!-- Icon 24x24 -->
+                                <div class="w-6 h-6 flex items-center justify-center shrink-0">
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M1 6L6 11L15 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    {benefit}
-                                </li>
-                            ))
-                        }
-                    </ul>
+                                </div>
+                                <!-- Geist 22px/500 #FFFFFF lh:28.6 ls:-0.5 -->
+                                <span class="text-[22px] font-medium leading-[28.6px] tracking-[-0.5px] text-white">{b.label}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <!-- Right column -->
+                    <div class="flex flex-col gap-5">
+                        {benefits.slice(3).map((b) => (
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 flex items-center justify-center shrink-0">
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M1 6L6 11L15 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="text-[22px] font-medium leading-[28.6px] tracking-[-0.5px] text-white">{b.label}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

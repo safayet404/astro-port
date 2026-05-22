@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Geist', sans-serif;
+}
 
 .container {
     max-width: 1180px !important;

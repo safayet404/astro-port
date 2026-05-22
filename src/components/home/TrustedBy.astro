@@ -1,127 +1,66 @@
 ---
-// Portfolio.astro
 const logos = [
     { src: "/epay.png", alt: "Epay" },
-    { src: "/b2.png", alt: "Niro" },
-    { src: "/b3.png", alt: "Logoipsum" },
-    { src: "/b4.png", alt: "Loco" },
-    { src: "/b5.png", alt: "Bogo" },
-    { src: "/b6.png", alt: "Logoipsum 2" },
+    { src: "/b2.png", alt: "Brand 2" },
+    { src: "/b3.png", alt: "Brand 3" },
+    { src: "/b4.png", alt: "Brand 4" },
+    { src: "/b5.png", alt: "Brand 5" },
+    { src: "/b6.png", alt: "Brand 6" },
 ];
 ---
 
-<section id="portfolio" class="px-4 py-10 bg-[#F2F2F2] font-sans">
-    <div class="container mx-auto max-w-6xl">
-        <!-- Project Images Grid -->
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full"
-        >
-            <img
-                class="rounded-2xl w-full h-64 sm:h-72 lg:h-80 object-cover"
-                src="/1.png"
-                alt="Luxury Dream Home project"
-                loading="lazy"
-            />
-            <img
-                class="rounded-2xl w-full h-64 sm:h-72 lg:h-80 object-cover"
-                src="/2.png"
-                alt="Healthcare Website project"
-                loading="lazy"
-            />
-            <img
-                class="rounded-2xl w-full h-64 sm:h-72 lg:h-80 object-cover sm:col-span-2 lg:col-span-1"
-                src="/3.png"
-                alt="Finance App project"
-                loading="lazy"
-            />
+<!-- TRUSTED_BY: 1920x683 | VERTICAL gap:12 | pad T:50 R:370 B:50 L:370 | align:CENTER -->
+<section class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col items-center gap-3">
+
+    <!-- Top: 3 project image slots | HORIZONTAL gap:24 | SPACE_BETWEEN -->
+    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[24px] justify-between">
+        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
+            <img src="/1.png" alt="Project 1" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
         </div>
-
-        <!-- Trusted By Marquee -->
-        <div class="mt-10 flex items-center gap-6">
-            <p class="text-[#1A1A1A] font-bold text-base flex-shrink-0">
-                Trusted by:
-            </p>
-
-            <!-- Marquee wrapper -->
-            <div class="overflow-hidden flex-1 relative">
-                <!-- Fade edges -->
-                <div
-                    class="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-[#F2F2F2] to-transparent z-10 pointer-events-none"
-                >
-                </div>
-                <div
-                    class="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#F2F2F2] to-transparent z-10 pointer-events-none"
-                >
-                </div>
-
-                <div class="marquee-track flex items-center gap-10 w-max">
-                    <!-- Render logos twice for seamless loop -->
-                    {
-                        [...logos, ...logos].map((logo, i) => (
-                            <img
-                                src={logo.src}
-                                alt={logo.alt}
-                                class="h-14 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200 flex-shrink-0"
-                                loading="lazy"
-                                onerror="this.style.display='none'"
-                            />
-                        ))
-                    }
-                </div>
-            </div>
+        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
+            <img src="/2.png" alt="Project 2" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
         </div>
-
-        <!-- CTA + Description -->
-        <div
-            class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-6"
-        >
-            <a
-                href="#work"
-                class="flex-shrink-0 inline-flex items-center gap-2 px-8 py-3 rounded-full border border-gray-400 text-[#1A1A1A] font-semibold text-sm hover:bg-[#1A1A1A] hover:text-white transition-colors duration-200"
-            >
-                View more Work
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4 -rotate-45"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-            </a>
-            <p
-                class="text-gray-500 text-sm sm:text-base leading-relaxed text-center sm:text-left"
-            >
-                I help brands, founders, and small teams craft <br />
-                <span class="text-[#1A1A1A] font-semibold"
-                    >beautiful and impactful</span
-                >
-                digital experiences
-            </p>
+        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
+            <img src="/3.png" alt="Project 3" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
         </div>
     </div>
+
+    <!-- Middle: "Trusted by:" + logos | HORIZONTAL gap:57 | pad T:40 B:40 | SPACE_BETWEEN align:CENTER -->
+    <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 py-[40px]">
+        <!-- "Trusted by:" Geist 28px/500 #1A1A1A lh:36.4 ls:-1 -->
+        <span class="text-[28px] font-medium leading-[36.4px] tracking-[-1px] text-[#1A1A1A] shrink-0">Trusted by:</span>
+
+        <!-- Logos row: HORIZONTAL gap:158 SPACE_BETWEEN -->
+        <div class="flex items-center gap-8 lg:gap-[57px] flex-wrap justify-center sm:justify-between flex-1 ml-0 sm:ml-[57px]">
+            {logos.map((logo) => (
+                <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    class="h-[37px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                    onerror="this.style.display='none'"
+                />
+            ))}
+        </div>
+    </div>
+
+    <!-- Bottom: CTA button + description | HORIZONTAL gap:35 | align:CENTER -->
+    <div class="w-full flex flex-col sm:flex-row items-center gap-[35px]">
+        <!-- "View more Work" button: 322x64 | bg:#FFFFFF | stroke:#1A1A1A 1px | radius:100 | pad T:10 R:20 B:10 L:20 -->
+        <a
+            href="#work"
+            class="inline-flex items-center gap-[6px] shrink-0 bg-white border border-[#1A1A1A] rounded-full py-[10px] px-5 hover:bg-[#1A1A1A] hover:text-white transition-colors group"
+            style="height:64px;"
+        >
+            <!-- Geist 22px/500 #1A1A1A lh:28.6 -->
+            <span class="text-[22px] font-medium leading-[28.6px] text-[#1A1A1A] group-hover:text-white">View more Work</span>
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M6 20L20 6M20 6H6M20 6V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#1A1A1A]"/>
+            </svg>
+        </a>
+
+        <!-- Description: Geist 20px/500 #4E5663 lh:26 -->
+        <p class="text-[20px] font-medium leading-[26px] text-[#4E5663] text-center sm:text-left">
+            I help brands, founders, and small teams craft beautiful and impactful digital experiences
+        </p>
+    </div>
 </section>
-
-<style>
-    .marquee-track {
-        animation: marquee 18s linear infinite;
-    }
-
-    .marquee-track:hover {
-        animation-play-state: paused;
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-</style>
