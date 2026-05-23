@@ -10,41 +10,76 @@ const logos = [
 ---
 
 <!-- TRUSTED_BY: 1920x683 | VERTICAL gap:12 | pad T:50 R:370 B:50 L:370 | align:CENTER -->
-<section class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col items-center gap-3">
-
+<section
+    class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col items-center gap-3"
+>
     <!-- Top: 3 project image slots | HORIZONTAL gap:24 | SPACE_BETWEEN -->
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[24px] justify-between">
-        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
-            <img src="/1.png" alt="Project 1" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
+    <div
+        class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[24px] justify-between"
+    >
+        <div
+            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+        >
+            <img
+                src="/1.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+                onerror="this.parentElement.style.background='#E5E7EB'"
+            />
         </div>
-        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
-            <img src="/2.png" alt="Project 2" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
+        <div
+            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+        >
+            <img
+                src="/2.png"
+                alt="Project 2"
+                class="w-full h-full object-cover"
+                onerror="this.parentElement.style.background='#E5E7EB'"
+            />
         </div>
-        <div class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden">
-            <img src="/3.png" alt="Project 3" class="w-full h-full object-cover" onerror="this.parentElement.style.background='#E5E7EB'" />
+        <div
+            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+        >
+            <img
+                src="/3.png"
+                alt="Project 3"
+                class="w-full h-full object-cover"
+                onerror="this.parentElement.style.background='#E5E7EB'"
+            />
         </div>
     </div>
 
     <!-- Middle: "Trusted by:" + logos | HORIZONTAL gap:57 | pad T:40 B:40 | SPACE_BETWEEN align:CENTER -->
-    <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 py-[40px]">
+    <div
+        class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 py-[40px]"
+    >
         <!-- "Trusted by:" Geist 28px/500 #1A1A1A lh:36.4 ls:-1 -->
-        <span class="text-[28px] font-medium leading-[36.4px] tracking-[-1px] text-[#1A1A1A] shrink-0">Trusted by:</span>
+        <span
+            class="text-[28px] font-medium leading-[36.4px] tracking-[-1px] text-[#1A1A1A] shrink-0"
+            >Trusted by:</span
+        >
 
         <!-- Logos row: HORIZONTAL gap:158 SPACE_BETWEEN -->
-        <div class="flex items-center gap-8 lg:gap-[57px] flex-wrap justify-center sm:justify-between flex-1 ml-0 sm:ml-[57px]">
-            {logos.map((logo) => (
-                <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    class="h-[37px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
-                    onerror="this.style.display='none'"
-                />
-            ))}
+        <div
+            class="flex items-center gap-8 lg:gap-[57px] flex-wrap justify-center sm:justify-between flex-1 ml-0 sm:ml-[57px]"
+        >
+            {
+                logos.map((logo) => (
+                    <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        class="h-[37px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                        onerror="this.style.display='none'"
+                    />
+                ))
+            }
         </div>
     </div>
 
     <!-- Bottom: CTA button + description | HORIZONTAL gap:35 | align:CENTER -->
-    <div class="w-full flex flex-col sm:flex-row items-center gap-[35px]">
+    <div
+        class="w-full flex flex-col sm:flex-row justify-center items-center gap-[35px]"
+    >
         <!-- "View more Work" button: 322x64 | bg:#FFFFFF | stroke:#1A1A1A 1px | radius:100 | pad T:10 R:20 B:10 L:20 -->
         <a
             href="#work"
@@ -52,15 +87,40 @@ const logos = [
             style="height:64px;"
         >
             <!-- Geist 22px/500 #1A1A1A lh:28.6 -->
-            <span class="text-[22px] font-medium leading-[28.6px] text-[#1A1A1A] group-hover:text-white">View more Work</span>
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                <path d="M6 20L20 6M20 6H6M20 6V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#1A1A1A]"/>
+            <span
+                class="text-[22px] font-medium leading-[28.6px] text-[#1A1A1A] group-hover:text-white"
+                >View more Work</span
+            >
+            <!-- <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path
+                    d="M6 20L20 6M20 6H6M20 6V20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-[#1A1A1A]"></path>
+            </svg> -->
+            <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.9283 0.00922218C14.9313 0.00615793 14.9345 0.00301816 14.9375 -4.60831e-05L16.4697 1.5321L16.4377 1.56411C12.7792 5.25279 12.9651 10.284 15.3205 12.6395L13.7885 14.1716C11.8733 12.2564 11.1002 9.36271 11.5792 6.42252L1.53204 16.4697L-2.21529e-05 14.9377L10.0473 4.8903C7.10706 5.36944 4.21317 4.59624 2.298 2.68107L3.83006 1.149C6.19035 3.50929 11.2376 3.69116 14.9283 0.00922218Z"
+                    fill="#1A1A1A"></path>
             </svg>
         </a>
 
         <!-- Description: Geist 20px/500 #4E5663 lh:26 -->
-        <p class="text-[20px] font-medium leading-[26px] text-[#4E5663] text-center sm:text-left">
-            I help brands, founders, and small teams craft beautiful and impactful digital experiences
+        <p
+            class="text-[20px] font-medium leading-[26px] text-[#4E5663] text-center sm:text-left"
+        >
+            I help brands, founders, and small teams craft <br /> beautiful and impactful
+            digital experiences
         </p>
     </div>
 </section>
