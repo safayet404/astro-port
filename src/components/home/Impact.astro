@@ -4,16 +4,16 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 ---
 
 <!-- IMPACT: 1920x877 | VERTICAL gap:40 | pad T:50 R:370 B:50 L:370 | align:CENTER -->
-<section id="results" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col items-center gap-10">
+<section id="results" class="w-full py-12.5 px-6 2xl:px-92.5 flex flex-col items-center gap-10">
 
     <!-- Header: VERTICAL gap:10 | centered -->
-    <div class="flex flex-col items-center gap-[10px] text-center">
+    <div class="flex flex-col items-center gap-2.5 text-center">
         <!-- Badge: stroke:#BDC1C7 1px | Geist 16px/500 #4E5663 | pad T:10 R:16 B:10 L:16 | radius:100 -->
-        <div class="inline-flex border border-[#BDC1C7] rounded-full py-[10px] px-4">
+        <div class="inline-flex border border-[#BDC1C7] rounded-full py-2.5 px-4">
             <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Expertise</span>
         </div>
         <!-- Geist 50px/700 #1A1A1A lh:65 ls:-2 -->
-        <h2 class="text-[40px] lg:text-[50px] font-bold leading-[65px] tracking-[-2px] text-[#1A1A1A]">Impactful Results</h2>
+        <h2 class="text-[40px] lg:text-[50px] font-bold leading-16.25 tracking-[-2px] text-[#1A1A1A]">Impactful Results</h2>
     </div>
 
     <!-- Bento grid: 1180x632 | HORIZONTAL gap:16 | SPACE_BETWEEN -->
@@ -29,14 +29,14 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
                 <div class="flex items-center">
                     <div class="flex -space-x-1">
                         {[0,1,2,3].map(() => (
-                            <div class="w-[50px] h-[50px] rounded-full bg-gray-300 border-2 border-white overflow-hidden">
+                            <div class="w-12.5 h-12.5 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
                                 <img src="/t1.png" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'" />
                             </div>
                         ))}
                     </div>
                     <!-- 04+ badge: bg:#2966F4 | Geist 20px/600 #FFFFFF lh:26 ls:-1 -->
-                    <div class="w-[54px] h-[54px] rounded-full bg-[#2966F4] flex items-center justify-center ml-[-4px] border-2 border-white">
-                        <span class="text-[20px] font-semibold leading-[26px] tracking-[-1px] text-white">04+</span>
+                    <div class="w-13.5 h-13.5 rounded-full bg-[#2966F4] flex items-center justify-center -ml-1 border-2 border-white">
+                        <span class="text-[20px] font-semibold leading-6.5 tracking-[-1px] text-white">04+</span>
                     </div>
                 </div>
                 <!-- Text: Geist 24px/600 #1A1A1A lh:31.2 ls:-1 -->
@@ -53,9 +53,9 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-center gap-4 border-2 border-white"
                  style="background: linear-gradient(360deg, #F2FFBE 0%, #FFFFFF 100%);">
                 {leftServices.map((service, i) => (
-                    <div class={`flex items-center gap-[5px] ${i === 1 ? 'justify-end' : 'justify-start'}`}>
+                    <div class={`flex items-center gap-1.25 ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
-                            <div class="w-[40px] h-[48px] rounded-full flex items-center justify-center shrink-0">
+                            <div class="w-10 h-12 rounded-full flex items-center justify-center shrink-0">
                                <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_1_312)">
 <rect x="6" y="2" width="40" height="48" rx="20" fill="white" shape-rendering="crispEdges"/>
@@ -78,11 +78,11 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
                             </div>
                         )}
                         <!-- Geist 18px/500 #1A1A1A lh:23.4 | rounded pill -->
-                        <div class={`px-5 py-[10px] rounded-full border text-[18px] font-medium leading-[23.4px] text-[#1A1A1A] ${i === 1 ? 'bg-white border-[#989898]/50' : 'border-[#4E5663]'}`}>
+                        <div class={`px-5 py-2.5 rounded-full border text-[18px] font-medium leading-[23.4px] text-[#1A1A1A] ${i === 1 ? 'bg-white border-[#989898]/50' : 'border-[#4E5663]'}`}>
                             {service}
                         </div>
                         {i === 1 && (
-                            <div class="w-[40px] h-[48px] rounded-full bg-white flex items-center justify-center shrink-0">
+                            <div class="w-10 h-12 rounded-full bg-white flex items-center justify-center shrink-0">
                                 <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_1_312)">
 <rect x="6" y="2" width="40" height="48" rx="20" fill="white" shape-rendering="crispEdges"/>
@@ -126,9 +126,9 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             <!-- Text pinned to bottom -->
             <div class="absolute bottom-0 left-0 right-0 p-8 flex flex-col gap-2">
                 <!-- Geist 30px/600 #FFFFFF lh:39 ls:-1 -->
-                <h3 class="text-[30px] font-semibold leading-[39px] tracking-[-1px] text-white">150+ Global and Local Clients</h3>
+                <h3 class="text-[30px] font-semibold leading-9.75 tracking-[-1px] text-white">150+ Global and Local Clients</h3>
                 <!-- Geist 20px/500 #E6E6E6 lh:30 ls:-0.5 -->
-                <p class="text-[20px] font-medium leading-[30px] tracking-[-0.5px] text-[#E6E6E6]">We ensure excellence for customer satisfaction.</p>
+                <p class="text-[20px] font-medium leading-7.5 tracking-[-0.5px] text-[#E6E6E6]">We ensure excellence for customer satisfaction.</p>
             </div>
         </div>
 
@@ -139,15 +139,15 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-between gap-6 border-2 border-white"
                  style="background: linear-gradient(360deg, #B4FFC3 0%, #FFFFFF 100%);">
                 <div class="flex justify-end gap-3">
-                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#E2F4BA] border border-[#F5F8FF] flex items-center justify-center">
+                    <div class="w-15 h-15 rounded-2xl bg-[#E2F4BA] border border-[#F5F8FF] flex items-center justify-center">
                         <span class="text-2xl">⭐</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
                     <!-- Geist 30px/600 #1A1A1A lh:39 ls:-1 -->
-                    <h3 class="text-[30px] font-semibold leading-[39px] tracking-[-1px] text-[#1A1A1A]">4.9/4 Rating</h3>
+                    <h3 class="text-[30px] font-semibold leading-9.75 tracking-[-1px] text-[#1A1A1A]">4.9/4 Rating</h3>
                     <!-- Geist 20px/500 #4E5663 lh:30 ls:-0.5 -->
-                    <p class="text-[20px] font-medium leading-[30px] tracking-[-0.5px] text-[#4E5663]">We ensure excellence for customer satisfaction.</p>
+                    <p class="text-[20px] font-medium leading-7.5 tracking-[-0.5px] text-[#4E5663]">We ensure excellence for customer satisfaction.</p>
                 </div>
             </div>
 
@@ -155,9 +155,9 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-center gap-4 border-2 border-white"
                  style="background: linear-gradient(360deg, #FFD1C5 0%, #FFFFFF 100%);">
                 {rightServices.map((service, i) => (
-                    <div class={`flex items-center gap-[5px] ${i === 1 ? 'justify-end' : 'justify-start'}`}>
+                    <div class={`flex items-center gap-1.25 ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
-                            <div class="w-[40px] h-[48px] rounded-full   flex items-center justify-center shrink-0">
+                            <div class="w-10 h-12 rounded-full   flex items-center justify-center shrink-0">
                                 <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_1_312)">
 <rect x="6" y="2" width="40" height="48" rx="20" fill="white" shape-rendering="crispEdges"/>
@@ -178,11 +178,11 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 </svg>
                             </div>
                         )}
-                        <div class={`px-5 py-[10px] rounded-full border text-[18px] font-medium leading-[23.4px] text-[#1A1A1A] ${i === 1 ? 'border-[#4E5663]' : 'bg-white border-[#989898]/50'}`}>
+                        <div class={`px-5 py-2.5 rounded-full border text-[18px] font-medium leading-[23.4px] text-[#1A1A1A] ${i === 1 ? 'border-[#4E5663]' : 'bg-white border-[#989898]/50'}`}>
                             {service}
                         </div>
                         {i === 1 && (
-                            <div class="w-[40px] h-[48px] rounded-full  flex items-center justify-center shrink-0">
+                            <div class="w-10 h-12 rounded-full  flex items-center justify-center shrink-0">
                                <svg width="52" height="60" viewBox="0 0 52 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_1_312)">
 <rect x="6" y="2" width="40" height="48" rx="20" fill="white" shape-rendering="crispEdges"/>
