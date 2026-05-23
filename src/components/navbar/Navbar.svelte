@@ -25,11 +25,11 @@
 
 <!-- Desktop Navbar: 1920x110 | pad T:32 R:370 B:32 L:370 | bg:#FFFFFF -->
 <nav
-    class="hidden lg:flex justify-between items-center h-[110px] px-6 2xl:px-[370px] bg-white"
+    class="hidden lg:flex justify-between items-center h-27.5 px-6 2xl:px-92.5 bg-white"
 >
     <!-- Logo -->
     <button type="button" on:click={() => scrollToSection("home")}>
-        <img src="/logo.svg" alt="Barrzen logo" class="h-[55px] w-auto" />
+        <img src="/logo.svg" alt="Barrzen logo" class="h-13.75 w-auto" />
     </button>
 
     <!-- Nav links: HORIZONTAL gap:32 | Geist 18px/500 #1A1A1A UPPERCASE -->
@@ -81,7 +81,7 @@
 </nav>
 
 <!-- Mobile Navbar -->
-<nav class="lg:hidden flex justify-between items-center h-[70px] px-6 bg-white">
+<nav class="lg:hidden flex justify-between items-center h-17.5 px-6 bg-white">
     <button type="button" on:click={() => scrollToSection("home")}>
         <img src="/logo.svg" alt="Barrzen logo" class="h-8 w-auto" />
     </button>
@@ -127,7 +127,7 @@
 {#if isMenuOpen}
     <div
         transition:fly={{ y: -10, duration: 200 }}
-        class="lg:hidden fixed top-[70px] left-0 right-0 bg-white border-b border-[#EBEBEB] px-6 py-6 z-50 shadow-lg"
+        class="lg:hidden fixed top-17.5 left-0 right-0 bg-white border-b border-[#EBEBEB] px-6 py-6 z-50 shadow-lg"
     >
         <ul class="flex flex-col gap-6">
             {#each menu as item}
