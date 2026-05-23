@@ -11,14 +11,14 @@ const logos = [
 
 <!-- TRUSTED_BY: 1920x683 | VERTICAL gap:12 | pad T:50 R:370 B:50 L:370 | align:CENTER -->
 <section
-    class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col items-center gap-3"
+    class="w-full py-12.5 px-6 2xl:px-92.5 flex flex-col items-center gap-3"
 >
     <!-- Top: 3 project image slots | HORIZONTAL gap:24 | SPACE_BETWEEN -->
     <div
-        class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[24px] justify-between"
+        class="w-full flex flex-col lg:flex-row gap-6 lg:gap-6 justify-between"
     >
         <div
-            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+            class="flex-1 aspect-square max-h-94.5 bg-gray-200 rounded-[10px] overflow-hidden"
         >
             <img
                 src="/1.png"
@@ -28,7 +28,7 @@ const logos = [
             />
         </div>
         <div
-            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+            class="flex-1 aspect-square max-h-94.5 bg-gray-200 rounded-[10px] overflow-hidden"
         >
             <img
                 src="/2.png"
@@ -38,7 +38,7 @@ const logos = [
             />
         </div>
         <div
-            class="flex-1 aspect-square max-h-[378px] bg-gray-200 rounded-[10px] overflow-hidden"
+            class="flex-1 aspect-square max-h-94.5 bg-gray-200 rounded-[10px] overflow-hidden"
         >
             <img
                 src="/3.png"
@@ -51,7 +51,7 @@ const logos = [
 
     <!-- Middle: "Trusted by:" + logos | HORIZONTAL gap:57 | pad T:40 B:40 | SPACE_BETWEEN align:CENTER -->
     <div
-        class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 py-[40px]"
+        class="w-full flex flex-col sm:flex-row items-center justify-between gap-6 py-10"
     >
         <!-- "Trusted by:" Geist 28px/500 #1A1A1A lh:36.4 ls:-1 -->
         <span
@@ -61,14 +61,14 @@ const logos = [
 
         <!-- Logos row: HORIZONTAL gap:158 SPACE_BETWEEN -->
         <div
-            class="flex items-center gap-8 lg:gap-[57px] flex-wrap justify-center sm:justify-between flex-1 ml-0 sm:ml-[57px]"
+            class="flex items-center gap-8 lg:gap-14.25 flex-wrap justify-center sm:justify-between flex-1 ml-0 sm:ml-14.25"
         >
             {
                 logos.map((logo) => (
                     <img
                         src={logo.src}
                         alt={logo.alt}
-                        class="h-[37px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                        class="h-9.25 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-200"
                         onerror="this.style.display='none'"
                     />
                 ))
@@ -78,7 +78,7 @@ const logos = [
 
     <!-- Bottom: CTA button + description | HORIZONTAL gap:35 | align:CENTER -->
     <div
-        class="w-full flex flex-col sm:flex-row justify-center items-center gap-[35px]"
+        class="w-full flex flex-col sm:flex-row justify-center items-center gap-8.75"
     >
         <!-- "View more Work" button: 322x64 | bg:#FFFFFF | stroke:#1A1A1A 1px | radius:100 | pad T:10 R:20 B:10 L:20 -->
         <a
@@ -116,7 +116,7 @@ const logos = [
 
         <!-- Description: Geist 20px/500 #4E5663 lh:26 -->
         <p
-            class="text-[20px] font-medium leading-[26px] text-[#4E5663] text-center sm:text-left"
+            class="text-[20px] font-medium leading-6.5 text-[#4E5663] text-center sm:text-left"
         >
             I help brands, founders, and small teams craft <br /> beautiful and impactful
             digital experiences
