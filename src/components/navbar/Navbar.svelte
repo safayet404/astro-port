@@ -24,7 +24,9 @@
 </script>
 
 <!-- Desktop Navbar: 1920x110 | pad T:32 R:370 B:32 L:370 | bg:#FFFFFF -->
-<nav class="hidden lg:flex justify-between items-center h-[110px] px-6 2xl:px-[370px] bg-white">
+<nav
+    class="hidden lg:flex justify-between items-center h-[110px] px-6 2xl:px-[370px] bg-white"
+>
     <!-- Logo -->
     <button type="button" on:click={() => scrollToSection("home")}>
         <img src="/logo.svg" alt="Barrzen logo" class="h-[55px] w-auto" />
@@ -48,12 +50,32 @@
     <!-- CTA: 196x50 | bg:#2966F4 | radius:100 | pad T:10 R:20 B:10 L:20 | Geist 18px/500 #FFFFFF -->
     <a
         href="#contact"
-        class="inline-flex items-center gap-1 bg-[#2966F4] text-white text-[18px] font-medium leading-[23.4px] px-5 py-[10px] rounded-full hover:bg-[#1d50d4] transition-colors"
-        style="height:50px;"
+        class="inline-flex justify-center items-center gap-1 w-49 h-12.5 bg-[#2966F4] text-white text-[18px] font-medium leading-[23.4px] px-5 py-2.5 rounded-full hover:bg-[#1d50d4] shadow-2xl shadow-black transition-colors"
     >
         Let's talk
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> -->
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clip-path="url(#clip0_1_585)">
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18.1809 4.40601C18.1837 4.40318 18.1866 4.40028 18.1895 4.39746L19.6037 5.81174L19.5742 5.8413C16.1971 9.24623 16.3687 13.8904 18.543 16.0647L17.1288 17.4789C15.361 15.7111 14.6473 13.04 15.0895 10.326L5.81517 19.6003L4.40095 18.1861L13.6754 8.91163C10.9613 9.35391 8.29005 8.64018 6.5222 6.87233L7.93642 5.45812C10.1151 7.63684 14.7741 7.80472 18.1809 4.40601Z"
+                    fill="white"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip0_1_585">
+                    <rect width="24" height="24" fill="white" />
+                </clipPath>
+            </defs>
         </svg>
     </a>
 </nav>
@@ -69,9 +91,35 @@
         aria-label="Toggle menu"
     >
         {#if isMenuOpen}
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                ><line x1="18" y1="6" x2="6" y2="18" /><line
+                    x1="6"
+                    y1="6"
+                    x2="18"
+                    y2="18"
+                /></svg
+            >
         {:else}
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                ><line x1="3" y1="8" x2="21" y2="8" /><line
+                    x1="3"
+                    y1="16"
+                    x2="21"
+                    y2="16"
+                /></svg
+            >
         {/if}
     </button>
 </nav>
