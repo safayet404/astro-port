@@ -3,36 +3,57 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 ---
 
 <!-- CONTACT: 1920x945 | pad T:50 R:370 B:50 L:370 | HORIZONTAL gap:88 -->
-<section id="contact" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-start">
-
+<section
+    id="contact"
+    class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-start"
+>
     <!-- Left col: 319x705 | VERTICAL gap:40 -->
     <div class="flex flex-col gap-10 w-full lg:max-w-[319px] shrink-0">
-
         <!-- Badge + Heading -->
         <div class="flex flex-col gap-[10px]">
             <!-- Badge: stroke:#BDC1C7 | Geist 16px/500 #4E5663 | radius:100 -->
-            <div class="inline-flex self-start border border-[#BDC1C7] rounded-full py-[10px] px-4">
-                <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Contact Us</span>
+            <div
+                class="inline-flex self-start border border-[#BDC1C7] rounded-full py-1 px-4"
+            >
+                <span
+                    class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]"
+                    >Contact Us</span
+                >
             </div>
             <!-- Heading: Geist 50px/700 #1A1A1A lh:54 ls:-2 -->
-            <h2 class="text-[36px] lg:text-[50px] font-bold leading-[1.08] lg:leading-[54px] tracking-[-2px] text-[#1A1A1A]">
+            <h2
+                class="text-[36px] lg:text-[50px] font-bold leading-[1.08] lg:leading-[54px] tracking-[-2px] text-[#1A1A1A]"
+            >
                 Let's Collaborate Together
             </h2>
         </div>
 
         <!-- Image: 283x283 radius:10 -->
-        <div class="w-full lg:w-[283px] lg:h-[283px] rounded-[10px] overflow-hidden shrink-0">
-            <img src="/masjidul.png" alt="Masjidul" class="w-full h-full object-cover object-top" />
+        <div
+            class="w-full lg:w-[283px] lg:h-[283px] rounded-[10px] overflow-hidden shrink-0"
+        >
+            <img
+                src="/masjidul.png"
+                alt="Masjidul"
+                class="w-full h-full object-cover object-top"
+            />
         </div>
 
         <!-- Contact info: VERTICAL gap:24 -->
         <div class="flex flex-col gap-6">
             <!-- "Directly Reach Out": Geist 20px/500 #1A1A1A ls:-0.5 -->
-            <p class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-[#1A1A1A]">Directly Reach Out</p>
+            <p
+                class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-[#1A1A1A]"
+            >
+                Directly Reach Out
+            </p>
 
             <!-- Gmail: label Geist 20px/400 #4E5663 ls:-1 | value Geist 24px/600 #1A1A1A lh:31.2 ls:-1 -->
             <div class="flex flex-col gap-1">
-                <span class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]">Gmail</span>
+                <span
+                    class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]"
+                    >Gmail</span
+                >
                 <a
                     href="mailto:hellomasjidul@gmail.com"
                     class="text-[20px] lg:text-[24px] font-semibold leading-[31.2px] tracking-[-1px] text-[#1A1A1A] hover:text-[#2966F4] transition-colors break-all"
@@ -43,7 +64,10 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
             <!-- WhatsApp -->
             <div class="flex flex-col gap-1">
-                <span class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]">WhatsApp</span>
+                <span
+                    class="text-[20px] font-normal leading-[26px] tracking-[-1px] text-[#4E5663]"
+                    >WhatsApp</span
+                >
                 <a
                     href="https://wa.me/8801875189361"
                     target="_blank"
@@ -61,10 +85,12 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
         <!-- Inner dark card: bg:#1A1A1A radius:10 pad:40 -->
         <div class="bg-[#1A1A1A] rounded-[10px] p-8 lg:p-[40px]">
             <form class="flex flex-col gap-6" id="contact-form">
-
                 <!-- Full Name: label Geist 20px/500 #FFFFFF ls:-0.5 -->
                 <div class="flex flex-col gap-2">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Full Name</label>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                        >Full Name</label
+                    >
                     <input
                         type="text"
                         name="name"
@@ -76,7 +102,10 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
                 <!-- Email -->
                 <div class="flex flex-col gap-2">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Email</label>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                        >Email</label
+                    >
                     <input
                         type="email"
                         name="email"
@@ -88,7 +117,10 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
                 <!-- Service -->
                 <div class="flex flex-col gap-2">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Service</label>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                        >Service</label
+                    >
                     <div class="relative">
                         <select
                             name="service"
@@ -97,13 +129,29 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
                             <option value="">Select your service</option>
                             <option value="UI/UX Design">UI/UX Design</option>
                             <option value="Web Design">Web Design</option>
-                            <option value="Mobile App Design">Mobile App Design</option>
+                            <option value="Mobile App Design"
+                                >Mobile App Design</option
+                            >
                             <option value="SaaS Design">SaaS Design</option>
-                            <option value="E-commerce Design">E-commerce Design</option>
-                            <option value="Wireframing & Prototyping">Wireframing &amp; Prototyping</option>
+                            <option value="E-commerce Design"
+                                >E-commerce Design</option
+                            >
+                            <option value="Wireframing & Prototyping"
+                                >Wireframing &amp; Prototyping</option
+                            >
                         </select>
-                        <div class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#4E5663]">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                        <div
+                            class="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#4E5663]"
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                            >
                                 <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
                         </div>
@@ -112,8 +160,12 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
                 <!-- Current Website -->
                 <div class="flex flex-col gap-2">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">
-                        Current Website <span class="text-[#4E5663]">(Optional)</span>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                    >
+                        Current Website <span class="text-[#4E5663]"
+                            >(Optional)</span
+                        >
                     </label>
                     <input
                         type="url"
@@ -125,24 +177,32 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
                 <!-- Project Budget: pills -->
                 <div class="flex flex-col gap-3">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Project Budget</label>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                        >Project Budget</label
+                    >
                     <div class="flex flex-wrap gap-2" id="budget-group">
-                        {budgets.map((budget) => (
-                            <button
-                                type="button"
-                                data-budget={budget}
-                                class="budget-btn px-5 py-[10px] rounded-full border border-[#4E5663] text-[18px] font-medium leading-[23.4px] text-[#4E5663] hover:border-white hover:text-white transition-all"
-                            >
-                                {budget}
-                            </button>
-                        ))}
+                        {
+                            budgets.map((budget) => (
+                                <button
+                                    type="button"
+                                    data-budget={budget}
+                                    class="budget-btn px-5 py-[10px] rounded-full border border-[#4E5663] text-[18px] font-medium leading-[23.4px] text-[#4E5663] hover:border-white hover:text-white transition-all"
+                                >
+                                    {budget}
+                                </button>
+                            ))
+                        }
                     </div>
                     <input type="hidden" name="budget" id="selected-budget" />
                 </div>
 
                 <!-- Project Details -->
                 <div class="flex flex-col gap-2">
-                    <label class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white">Project Details</label>
+                    <label
+                        class="text-[20px] font-medium leading-[26px] tracking-[-0.5px] text-white"
+                        >Project Details</label
+                    >
                     <textarea
                         name="details"
                         rows="4"
@@ -159,7 +219,12 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
                 >
                     Send Message
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                        <path d="M6 20L20 6M20 6H6M20 6V20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M6 20L20 6M20 6H6M20 6V20"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></path>
                     </svg>
                 </button>
             </form>
@@ -169,7 +234,9 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 
 <script>
     const budgetBtns = document.querySelectorAll(".budget-btn");
-    const selectedBudget = document.getElementById("selected-budget") as HTMLInputElement;
+    const selectedBudget = document.getElementById(
+        "selected-budget",
+    ) as HTMLInputElement;
 
     budgetBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -179,7 +246,9 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
             });
             btn.classList.remove("border-[#4E5663]", "text-[#4E5663]");
             btn.classList.add("border-white", "text-white");
-            if (selectedBudget) selectedBudget.value = (btn as HTMLElement).dataset.budget || "";
+            if (selectedBudget)
+                selectedBudget.value =
+                    (btn as HTMLElement).dataset.budget || "";
         });
     });
 
