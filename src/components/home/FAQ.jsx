@@ -75,7 +75,7 @@ export default function FAQ() {
                                         <span class={`text-xl font-bold transition-colors ${openIndex() === index() ? 'text-[#3363FF]' : 'text-[#1A1A1A]'}`}>
                                             {faq.question}
                                         </span>
-                                        <span class="flex-shrink-0 ml-4">
+                                        <span class="shrink-0 ml-4">
                                             {openIndex() === index() ? (
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12" /></svg>
                                             ) : (
