@@ -2,10 +2,10 @@
 const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
 ---
 
-<!-- CONTACT: 1920x945 | pad T:50 R:370 B:50 L:370 | HORIZONTAL gap:88 -->
+<!-- CONTACT: 1920x945 | pad T:50 R:370 B:50 L:370 | HORIZONTAL gap:88 | centered -->
 <section
     id="contact"
-    class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-start"
+    class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-start justify-center"
 >
     <!-- Left col: 319x705 | VERTICAL gap:40 -->
     <div class="flex flex-col gap-10 w-full lg:max-w-[319px] shrink-0">
@@ -81,7 +81,7 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
     </div>
 
     <!-- Right col: 584x841 | bg:#FFFFFF pad:16 radius:10 -->
-    <div class="w-full flex-1 bg-white p-4 rounded-[10px]">
+    <div class="w-[584px] bg-white p-4">
         <!-- Inner dark card: bg:#1A1A1A radius:10 pad:40 -->
         <div class="bg-[#1A1A1A] rounded-[10px] p-8 lg:p-[40px]">
             <form class="flex flex-col gap-6" id="contact-form">
@@ -218,13 +218,26 @@ const budgets = ["Less than $5k", "$5k - $10k", "More than $20k+"];
                     style="height:64px;"
                 >
                     Send Message
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                        <path
-                            d="M6 20L20 6M20 6H6M20 6V20"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                    <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g clip-path="url(#clip0_1_515)">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M19.6947 4.7735C19.6977 4.77044 19.7009 4.7673 19.704 4.76424L21.2361 6.29638L21.2041 6.3284C17.5456 10.0171 17.7315 15.0483 20.087 17.4038L18.5549 18.9358C16.6397 17.0207 15.8666 14.127 16.3457 11.1868L6.29846 21.234L4.7664 19.7019L14.8138 9.65459C11.8735 10.1337 8.97959 9.36052 7.06442 7.44535L8.59648 5.91328C10.9568 8.27357 16.004 8.45544 19.6947 4.7735Z"
+                                fill="white"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_515">
+                                <rect width="26" height="26" fill="white"
+                                ></rect>
+                            </clipPath>
+                        </defs>
                     </svg>
                 </button>
             </form>

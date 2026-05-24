@@ -23,7 +23,7 @@ const members = [
     <!-- 4-column grid: HORIZONTAL gap:16 | 1180x283 -->
     <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-4">
         {members.map((member, i) => (
-            <div class="relative bg-white p-[10px] rounded-[10px]">
+            <div class="relative bg-white p-[10px] ">
                 <!-- Image: 263x263 radius:10 -->
                 <div class="w-full aspect-square rounded-[10px] overflow-hidden bg-gray-100">
                     <img
@@ -33,38 +33,16 @@ const members = [
                     />
                 </div>
                 <!-- Name label (shown on 3rd card per Figma) -->
-                {i === 2 && (
+                {/* {i === 2 && (
                     <div class="absolute bottom-[15px] left-1/2 -translate-x-1/2 bg-white p-[5px] rounded-[10px]">
                         <div class="bg-[#1A1A1A] rounded-full py-[10px] px-5 whitespace-nowrap">
                             <!-- Geist 18px/600 #FFFFFF lh:23.4 -->
                             <span class="text-[18px] font-semibold leading-[23.4px] text-white">{member.name}</span>
                         </div>
                     </div>
-                )}
+                )} */}
             </div>
         ))}
     </div>
 </section>
 
-<!-- CTA Banner: Frame 2147259544 | 1180x256 | bg:#FFFFFF pad:16 -->
-<div class="w-full px-6 2xl:px-[370px] py-0">
-    <div class="w-full bg-white p-4 rounded-[10px]">
-        <!-- Inner dark: HORIZONTAL gap:178 | pad T:40 R:40 B:40 L:40 | bg:#1A1A1A | radius:10 | SPACE_BETWEEN align:CENTER -->
-        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 bg-[#1A1A1A] rounded-[10px] p-10">
-            <!-- Heading: Geist font #FFFFFF -->
-            <h2 class="text-[28px] lg:text-[36px] font-semibold text-white leading-tight">
-                Ready To Grow Your<br />Business Digitally?
-            </h2>
-            <!-- CTA button -->
-            <a
-                href="#contact"
-                class="inline-flex items-center gap-2 bg-[#2966F4] text-white rounded-full py-[10px] px-5 text-[18px] font-medium hover:bg-[#1d50d4] transition-colors shrink-0"
-            >
-                Book a Call
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</div>
