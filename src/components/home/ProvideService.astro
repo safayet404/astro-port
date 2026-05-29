@@ -40,15 +40,15 @@ const services = [
 ---
 
 <!-- PROVIDE_SERVICE: 1920x2009 | VERTICAL gap:40 | pad T:50 R:370 B:50 L:370 -->
-<section id="service" class="w-full py-[50px] px-6 2xl:px-[370px] flex flex-col gap-10">
+<section id="service" class="w-full py-12.5 px-6 2xl:px-92.5 flex flex-col gap-10">
 
     <!-- Header: VERTICAL gap:10 -->
-    <div class="flex flex-col gap-[10px]">
+    <div class="flex flex-col gap-2.5">
         <div class="inline-flex self-start border border-[#BDC1C7] rounded-full py-1 px-4">
             <span class="text-[16px] font-medium leading-[20.8px] text-[#4E5663]">Services</span>
         </div>
         <!-- Geist 50px/700 #1A1A1A lh:65 ls:-2 -->
-        <h2 class="text-[40px] lg:text-[50px] font-bold leading-[65px] tracking-[-2px] text-[#1A1A1A]">We Provides services</h2>
+        <h2 class="text-[40px] lg:text-[50px] font-bold leading-16.25 tracking-[-2px] text-[#1A1A1A]">We Provides services</h2>
     </div>
 
     <!-- Service cards: VERTICAL gap:20 -->
@@ -66,18 +66,18 @@ const services = [
                     <div class="flex-1 flex flex-col lg:flex-row justify-between gap-10">
                         <div class="flex flex-col gap-4 flex-1">
                             <!-- Title: Geist 30px/600 lh:39 ls:-1 -->
-                            <h3 class={`text-[30px] font-semibold leading-[39px] tracking-[-1px] ${service.dark ? 'text-white' : 'text-[#1A1A1A]'}`}>
+                            <h3 class={`text-[30px] font-semibold leading-9.75 tracking-[-1px] ${service.dark ? 'text-white' : 'text-[#1A1A1A]'}`}>
                                 {service.title}
                             </h3>
                             <!-- Description: Geist 20px/500 lh:30 ls:-0.5 -->
-                            <p class={`text-[20px] font-medium leading-[30px] tracking-[-0.5px] ${service.dark ? 'text-[#D1D1D1]' : 'text-[#4E5663]'}`}>
+                            <p class={`text-[20px] font-medium leading-7.5 tracking-[-0.5px] ${service.dark ? 'text-[#D1D1D1]' : 'text-[#4E5663]'}`}>
                                 {service.description}
                             </p>
                             <!-- Tags: flex-wrap, pad T:10 R:16 B:10 L:16, radius:100 -->
                             {service.tags.length > 0 && (
-                                <div class="flex flex-wrap gap-[10px] mt-2">
+                                <div class="flex flex-wrap gap-2.5 mt-2">
                                     {service.tags.map((tag, ti) => (
-                                        <span class={`text-[18px] font-medium leading-[30px] tracking-[-0.5px] py-1 px-4 rounded-full border ${
+                                        <span class={`text-[18px] font-medium leading-7.5 tracking-[-0.5px] py-1 px-4 rounded-full border ${
                                             service.dark && ti === 0
                                                 ? 'border-white text-white'
                                                 : service.dark
@@ -93,7 +93,7 @@ const services = [
                             {service.images && (
                                 <div class="flex gap-5 mt-2 pb-0">
                                     {service.images.map((img) => (
-                                        <div class="flex-1 h-[341px] bg-[#2A2A2A] rounded-[10px] overflow-hidden">
+                                        <div class="flex-1 h-85.25 bg-[#2A2A2A] rounded-[10px] overflow-hidden">
                                             <img src={img} alt="" class="w-full h-full object-cover opacity-80" onerror="this.parentElement.style.background='#2A2A2A'" />
                                         </div>
                                     ))}
@@ -103,7 +103,7 @@ const services = [
 
                         <!-- Arrow button: 52x52 radius:16 bg:#2966F4 -->
                         <div class="shrink-0 self-start">
-                            <div class="w-[52px] h-[52px] rounded-2xl bg-[#2966F4] flex items-center justify-center">
+                            <div class="w-13 h-13 rounded-2xl bg-[#2966F4] flex items-center justify-center">
                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3733 0.011482C18.3771 0.00771103 18.381 0.00384565 18.3847 7.46909e-05L20.2705 1.88579L20.231 1.9252C15.7283 6.4651 15.9571 12.6574 18.8561 15.5564L16.9705 17.442C14.6134 15.0849 13.6618 11.5235 14.2515 7.90477L1.88568 20.2706L5.74007e-05 18.3849L12.366 6.01897C8.74723 6.60868 5.18553 5.65704 2.82839 3.29991L4.71401 1.41429C7.61897 4.31925 13.831 4.54309 18.3733 0.011482Z" fill="white"/>
 </svg>
