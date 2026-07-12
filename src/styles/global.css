@@ -5,6 +5,10 @@
     font-family: 'Geist', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1180px !important;
 }
