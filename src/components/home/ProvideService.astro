@@ -53,8 +53,12 @@ const services = [
 
     <!-- Service cards: VERTICAL gap:20 -->
     <div class="flex flex-col gap-5">
-        {services.map((service) => (
-            <div class={`w-full  overflow-hidden ${service.dark ? 'bg-white p-4' : 'bg-white'}`}>
+        {services.map((service, i) => (
+            <div
+                class={`w-full  overflow-hidden ${service.dark ? 'bg-white p-4' : 'bg-white'}`}
+                data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={Math.min(i * 100, 200)}
+            >
                 <div class={`flex flex-col lg:flex-row gap-10 rounded-[10px] p-8 ${service.dark ? 'bg-[#1A1A1A] pb-0' : 'bg-white'}`}>
 
                     <!-- Number: Geist 24px/500 lh:31.2 ls:-0.24 -->

@@ -24,7 +24,8 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 1: gradient #A1ECFF->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] h-77 p-8 flex flex-col gap-6 border-2 border-white"
-                 style="background: linear-gradient(360deg, #A1ECFF 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #A1ECFF 0%, #FFFFFF 100%);"
+                 data-aos="fade-right">
                 <!-- Avatars row: 50x50 overlap -4px -->
                 <div class="flex items-center">
                     <div class="flex -space-x-1">
@@ -51,7 +52,8 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 2: gradient #F2FFBE->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-center gap-4 border-2 border-white"
-                 style="background: linear-gradient(360deg, #F2FFBE 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #F2FFBE 0%, #FFFFFF 100%);"
+                 data-aos="fade-right" data-aos-delay="150">
                 {leftServices.map((service, i) => (
                     <div class={`flex items-center gap-1.25 ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
@@ -110,7 +112,7 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
         </div>
 
         <!-- Center col: full-bleed video background + gradient overlay | radius:10 -->
-        <div class="rounded-[10px] relative overflow-hidden h-158 ">
+        <div class="rounded-[10px] relative overflow-hidden h-158 " data-aos="zoom-in">
             <!-- Video fills entire card (matches Figma IMAGE FILL scaleMode=STRETCH) -->
             <video
                 class="absolute inset-0 w-full h-full object-fill object-right "
@@ -137,7 +139,8 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 3: gradient #B4FFC3->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-between gap-6 border-2 border-white"
-                 style="background: linear-gradient(360deg, #B4FFC3 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #B4FFC3 0%, #FFFFFF 100%);"
+                 data-aos="fade-left">
                 <div class="flex justify-end gap-3">
                     <div class="w-15 h-15 rounded-2xl bg-[#E2F4BA] border border-[#F5F8FF] flex items-center justify-center">
                         <span class="text-2xl">⭐</span>
@@ -153,7 +156,8 @@ const rightServices = ["Ecommerce", "Prototyping", "Wireframe"];
 
             <!-- Card 4: gradient #FFD1C5->#FFFFFF | radius:10 | pad:32 -->
             <div class="rounded-[10px] p-8 flex flex-col  h-77 justify-center gap-4 border-2 border-white"
-                 style="background: linear-gradient(360deg, #FFD1C5 0%, #FFFFFF 100%);">
+                 style="background: linear-gradient(360deg, #FFD1C5 0%, #FFFFFF 100%);"
+                 data-aos="fade-left" data-aos-delay="150">
                 {rightServices.map((service, i) => (
                     <div class={`flex items-center gap-1.25 ${i === 1 ? 'justify-end' : 'justify-start'}`}>
                         {i !== 1 && (
