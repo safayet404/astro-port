@@ -6,10 +6,10 @@ import me from "../../assets/me2.png";
 <!-- BANNER: 1920x628 | HORIZONTAL gap:127 | pad T:50 R:370 B:50 L:370 | justify:SPACE_BETWEEN align:CENTER -->
 <section class="w-full py-12.5 wrap">
     <div
-        class="flex flex-col lg:flex-row items-center justify-between gap-31.75"
+        class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10 2xl:gap-12"
     >
         <!-- Left: VERTICAL gap:32 -->
-        <div class="flex flex-col gap-8 max-w-171" data-aos="fade-right" data-aos-duration="900">
+        <div class="flex flex-col gap-8 w-full lg:flex-1 lg:min-w-0 lg:max-w-150" data-aos="fade-right" data-aos-duration="900">
             <!-- Inner: VERTICAL gap:20 -->
             <div class="flex flex-col gap-5">
                 <!-- Badge: 253x36 | pad T:10 R:16 B:10 L:16 | radius:100 | stroke:#BDC1C7 1px -->
@@ -28,10 +28,9 @@ import me from "../../assets/me2.png";
 
                 <!-- Heading: Geist 64px/600 #1A1A1A lh:74 ls:-3 -->
                 <h1
-                    class="text-[48px] capitalize lg:text-[54px] font-semibold leading-[1.15] lg:leading-18.5 tracking-[-3px] text-[#1A1A1A]"
+                    class="text-[40px] sm:text-[48px] capitalize lg:text-[50px] xl:text-[54px] font-semibold leading-[1.12] tracking-[-2px] lg:tracking-[-3px] text-balance text-[#1A1A1A]"
                 >
-                    We design<br />to drive results &amp;<br />faster business
-                    growth.
+                    We design to drive results &amp; faster business growth.
                 </h1>
 
                 <!-- Subtext: Geist 20px/500 #4E5663 lh:26 -->
@@ -82,14 +81,13 @@ import me from "../../assets/me2.png";
         </div>
 
         <!-- Right: Image placeholder 432x528 radius:10 -->
-        <div class="hidden lg:block shrink-0" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <div class="hidden lg:block shrink-0 w-75 xl:w-90 2xl:w-100" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
             <Image
                 src={me}
                 alt="Masjidul"
                 width={432}
                 height={528}
-                class="rounded-[10px] object-cover"
-                style="width:432px; height:528px;"
+                class="w-full h-auto rounded-[10px] object-cover"
             />
         </div>
     </div>

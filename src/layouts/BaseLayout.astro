@@ -33,13 +33,13 @@ import Navbar from "../components/navbar/Navbar.svelte";
         <main class="relative w-full max-w-480 mx-auto">
             <!-- Vertical border lines aligned to the locked container edges at every screen size -->
             <div
-                class="hidden lg:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
-                style="left: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));"
+                class="hidden xl:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
+                style="left: max(var(--wrap-pad), calc((100% - var(--wrap-rail)) / 2));"
             >
             </div>
             <div
-                class="hidden lg:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
-                style="right: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));"
+                class="hidden xl:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
+                style="right: max(var(--wrap-pad), calc((100% - var(--wrap-rail)) / 2));"
             >
             </div>
 
@@ -49,13 +49,23 @@ import Navbar from "../components/navbar/Navbar.svelte";
         <script>
             import AOS from "aos";
 
+            // Mark the page as JS-ready so the CSS failsafe stops forcing
+            // [data-aos] elements visible and AOS can take over the animation.
+            document.documentElement.classList.add("aos-ready");
+
             AOS.init({
                 duration: 800,
                 easing: "ease-out-cubic",
-                once: false,
-                mirror: true,
-                offset: 80,
+                once: true,
+                mirror: false,
+                offset: 0,
+                startEvent: "DOMContentLoaded",
             });
+
+            // Recalculate positions once fonts/images have settled and after
+            // full load, so nothing stays stuck in the hidden state.
+            window.addEventListener("load", () => AOS.refreshHard());
+            setTimeout(() => AOS.refreshHard(), 600);
         </script>
     </body>
 </html>

@@ -11,23 +11,46 @@ body {
 
 /*
  * Locked centered container (Framer-style).
- * Content never exceeds --wrap-max; on wider screens the extra space
- * becomes side padding instead of stretching the layout, so the layout
- * looks identical at every screen size >= (--wrap-max + 2 * --wrap-pad).
- * Below that it keeps a constant --wrap-pad gutter and shrinks smoothly —
- * no breakpoint "snap".
+ * - Content column is --wrap-content wide, centred, and never stretches:
+ *   on wider screens the extra space becomes side padding, so the layout
+ *   looks identical at every screen size. It shrinks smoothly below that
+ *   with a constant --wrap-pad gutter — no breakpoint "snap".
+ * - The vertical rails sit at --wrap-rail (slightly wider than the content
+ *   column) so there is always breathing room between text and rail.
  */
 :root {
-    --wrap-max: 1180px;
+    --wrap-content: 1120px;
+    --wrap-rail: 1180px;
     --wrap-pad: 1.5rem;
 }
 
 @utility wrap {
     width: 100%;
     margin-inline: auto;
-    padding-inline: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));
+    padding-inline: max(var(--wrap-pad), calc((100% - var(--wrap-content)) / 2));
 }
 
 .container {
-    max-width: var(--wrap-max) !important;
+    max-width: var(--wrap-content) !important;
+}
+
+/*
+ * Failsafe for AOS: aos.css hides every [data-aos] element with opacity:0
+ * as soon as the stylesheet loads. If the AOS script is slow, blocked, or
+ * miscalculates (e.g. at high browser zoom), that content would stay
+ * invisible forever. Until the script confirms it is running by adding
+ * `.aos-ready` to <html>, keep everything visible.
+ */
+html:not(.aos-ready) [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Respect users who prefer no motion. */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
