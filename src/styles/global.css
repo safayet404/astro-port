@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
 
 *, *::before, *::after {
     font-family: 'Geist', sans-serif;
@@ -9,6 +9,25 @@ body {
     overflow-x: hidden;
 }
 
+/*
+ * Locked centered container (Framer-style).
+ * Content never exceeds --wrap-max; on wider screens the extra space
+ * becomes side padding instead of stretching the layout, so the layout
+ * looks identical at every screen size >= (--wrap-max + 2 * --wrap-pad).
+ * Below that it keeps a constant --wrap-pad gutter and shrinks smoothly —
+ * no breakpoint "snap".
+ */
+:root {
+    --wrap-max: 1180px;
+    --wrap-pad: 1.5rem;
+}
+
+@utility wrap {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));
+}
+
 .container {
-    max-width: 1180px !important;
+    max-width: var(--wrap-max) !important;
 }

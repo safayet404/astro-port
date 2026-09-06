@@ -25,7 +25,7 @@
 
 <!-- Desktop Navbar: 1920x110 | pad T:32 R:370 B:32 L:370 | bg:#FFFFFF -->
 <nav
-    class="hidden lg:flex justify-between items-center h-27.5 px-6 2xl:px-92.5 bg-white"
+    class="hidden lg:flex justify-between items-center h-27.5 wrap bg-white"
 >
     <!-- Logo -->
     <button type="button" on:click={() => scrollToSection("home")}>

@@ -31,13 +31,15 @@ import Navbar from "../components/navbar/Navbar.svelte";
         </header>
 
         <main class="relative w-full max-w-480 mx-auto">
-            <!-- Figma vertical border lines: 2px white, at x=356 (left) and x=1562 (right) on 1920px canvas -->
+            <!-- Vertical border lines aligned to the locked container edges at every screen size -->
             <div
-                class="hidden 2xl:block absolute top-0 bottom-0 left-89 w-0.5 bg-white pointer-events-none z-40"
+                class="hidden lg:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
+                style="left: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));"
             >
             </div>
             <div
-                class="hidden 2xl:block absolute top-0 bottom-0 right-89 w-0.5 bg-white pointer-events-none z-40"
+                class="hidden lg:block absolute top-0 bottom-0 w-0.5 bg-white pointer-events-none z-40"
+                style="right: max(var(--wrap-pad), calc((100% - var(--wrap-max)) / 2));"
             >
             </div>
 
