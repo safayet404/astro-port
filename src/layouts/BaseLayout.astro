@@ -10,7 +10,6 @@ const {
 } = Astro.props;
 
 import "../styles/global.css";
-import "aos/dist/aos.css";
 import Navbar from "../components/navbar/Navbar.svelte";
 ---
 
@@ -47,25 +46,48 @@ import Navbar from "../components/navbar/Navbar.svelte";
         </main>
 
         <script>
-            import AOS from "aos";
+            // Lightweight scroll-reveal. Reads the existing data-aos / data-aos-delay
+            // / data-aos-duration attributes, so no markup changes are needed.
+            // IntersectionObserver-based: no position math, no race conditions.
+            (() => {
+                const els = Array.from(
+                    document.querySelectorAll("[data-aos]"),
+                );
+                if (!els.length) return;
 
-            // Mark the page as JS-ready so the CSS failsafe stops forcing
-            // [data-aos] elements visible and AOS can take over the animation.
-            document.documentElement.classList.add("aos-ready");
+                const wantsMotion = window.matchMedia(
+                    "(prefers-reduced-motion: no-preference)",
+                ).matches;
+                if (!wantsMotion) return; // leave everything visible, no animation
 
-            AOS.init({
-                duration: 800,
-                easing: "ease-out-cubic",
-                once: true,
-                mirror: false,
-                offset: 0,
-                startEvent: "DOMContentLoaded",
-            });
+                // Only now do we let the CSS hide things — so if this script
+                // never runs, content is never stuck invisible.
+                document.documentElement.classList.add("reveal-on");
 
-            // Recalculate positions once fonts/images have settled and after
-            // full load, so nothing stays stuck in the hidden state.
-            window.addEventListener("load", () => AOS.refreshHard());
-            setTimeout(() => AOS.refreshHard(), 600);
+                for (const el of els) {
+                    const delay = el.getAttribute("data-aos-delay");
+                    const dur = el.getAttribute("data-aos-duration");
+                    if (delay) el.style.setProperty("--reveal-delay", delay + "ms");
+                    if (dur) el.style.setProperty("--reveal-dur", dur + "ms");
+                }
+
+                const io = new IntersectionObserver(
+                    (entries) => {
+                        for (const e of entries) {
+                            if (e.isIntersecting) {
+                                e.target.classList.add("reveal-in");
+                            } else {
+                                // re-arm only after the element has fully left
+                                // the viewport (never hide something on screen)
+                                e.target.classList.remove("reveal-in");
+                            }
+                        }
+                    },
+                    { threshold: 0.08, rootMargin: "0px 0px -8% 0px" },
+                );
+
+                for (const el of els) io.observe(el);
+            })();
         </script>
     </body>
 </html>
